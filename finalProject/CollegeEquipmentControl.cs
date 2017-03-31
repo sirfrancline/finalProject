@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace finalProject
 {
@@ -95,7 +96,7 @@ namespace finalProject
                     break;
 
                 case MainProjectOptionEnum.Equipment:
-                   
+
                     DisplayEquipmentMenu();
                     int optionEquipment;
                     optionEquipment = Convert.ToInt32(Console.ReadLine());
@@ -106,7 +107,7 @@ namespace finalProject
                             Console.WriteLine("******Equipment List*******");
                             foreach (Equipment e in equipmentList)
                             {
-                                e.Display();
+                                //  e.Display();
                             }
                             break;
 
@@ -252,7 +253,7 @@ namespace finalProject
                         Equipment equipment = new Equipment();
                         equipment.ID = equipmentdetails[0];
                         equipment.Type = equipmentdetails[1];
-                        equipment.MaxRentalDays = equipmentdetails[2];
+                        equipment.MaxRentalDays = int.Parse(equipmentdetails[2]);
                         equipment.Description = equipmentdetails[3];
                         equipmentList.Add(equipment);
                     }
@@ -371,10 +372,15 @@ namespace finalProject
             Console.Write("Enter Description: ");
             string descritpion = Console.ReadLine();
 
-            Equipment newequipment = new Equipment(id, type, reantal, descritpion);
-            equipment.Add(newequipment);
+            Equipment newequipment = new Equipment
+            {
+                Description = descritpion,
+                ID = id,
+                MaxRentalDays = int.Parse(reantal),
+                Type = type
+            };
 
-            newequipment.Display();
+            equipment.Add(newequipment);
         }
 
         public static void DeleteStaff(List<Staff> staff)
@@ -403,7 +409,7 @@ namespace finalProject
             {
                 if (e.ID == id)
                 {
-                    e.Display();
+                    // e.Display();
                     equipment.Remove(e);
                     Console.WriteLine("Equipment Removed");
                     break;
@@ -441,29 +447,50 @@ namespace finalProject
 
         public static void UpdateEquipment(List<Equipment> equipment)
         {
+
+            //////////////////////////////////////////
+
+            var devicesDic = new Dictionary<string, Equipment>();
+            foreach (var item in equipment)
+            {
+                devicesDic.Add(item.ID, item);
+            }
+
+            //check if we have id
+            var idGotFromUser = "abc";
+            var exists = devicesDic.ContainsKey(idGotFromUser);
+            if (exists)
+            {
+                devicesDic[idGotFromUser].Type = "newValue";
+            }
+            else {
+                Console.WriteLine($"Cannot find item with ID:{idGotFromUser}");
+            }
+
+            //////////////////////////////////////////
             Console.Write("Enter Equipment ID : ");
             string id = Console.ReadLine();
+            var prompt = "Enter nw walue, ENTER for no change";
 
-            foreach (Equipment e in equipment)
+            var device = equipment.FirstOrDefault(a => a.ID == id);
+
+            Console.WriteLine($"Current type: {device.Type}");
+            Console.Write(prompt);
+            string type = Console.ReadLine();
+            Console.Write("Enter Max Rental Days : ");
+            string reantal = Console.ReadLine();
+            Console.Write("Enter Description: ");
+            string descritpion = Console.ReadLine();
+
+            Equipment newequipment = new Equipment
             {
-                if (e.ID == id)
-                {
-                    equipment.Remove(e);
-                    Console.Write("Enter Type : ");
-                    string type = Console.ReadLine();
-                    Console.Write("Enter Max Rental Days : ");
-                    string reantal = Console.ReadLine();
-                    Console.Write("Enter Description: ");
-                    string descritpion = Console.ReadLine();
+                Description = descritpion,
+                ID = id,
+                MaxRentalDays = int.Parse(reantal),
+                Type = type
+            };
 
-                    Equipment newequipment = new Equipment(id, type, reantal, descritpion);
-                    equipment.Add(newequipment);
-
-                    newequipment.Display();
-
-                    break;
-                }
-            }
+            equipment.Add(newequipment);
         }
     }
 }
