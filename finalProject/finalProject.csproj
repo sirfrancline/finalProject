@@ -67,6 +67,7 @@
       <DependentUpon>viewAddDeleteUpdateEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="CollegeEquipmentControl.cs" />
+    <Compile Include="Helpers.cs" />
     <Compile Include="IBooking.cs" />
     <Compile Include="MainProjectOptionEnum.cs" />
     <Compile Include="Program.cs" />
