@@ -10,13 +10,21 @@ namespace finalProject
         public void EntryPoint()
 
         {
-            List<Student> studentList = new List<Student>();
-            List<Staff> staffList = new List<Staff>();
-            List<Equipment> equipmentList = new List<Equipment>();
+            
+            var studentOperations = new StudentOperations();
+            studentOperations.Start("student.txt");
 
-            studentList = GetStudents();
+            var  equipmentOperations = new EquimpmentOperations();
+            equipmentOperations.Start("equipment.txt");
+                
+
+
+            List<Staff> staffList = new List<Staff>();
+
+
+
             staffList = GetStuffMembers();
-            equipmentList = GetEquipment();
+            
 
             Console.Clear();
             DisplayMainMenu();
@@ -31,13 +39,8 @@ namespace finalProject
 
                 case MainProjectOptionEnum.Staff:
                     int optionStaff;
-                    Console.WriteLine("****Staff******");
-                    Console.WriteLine("\t1. View");
-                    Console.WriteLine("\t2. Add");
-                    Console.WriteLine("\t3. Delete");
-                    Console.WriteLine("\t4. Update");
-                    Console.WriteLine("\t5. Exit ");
-                    optionStaff = Convert.ToInt32(Console.ReadLine());
+                    DisplayStaffMaintanenceMenu();
+                        optionStaff = Convert.ToInt32(Console.ReadLine());
 
                     switch (optionStaff)
                     {
@@ -68,69 +71,11 @@ namespace finalProject
                     break;
 
                 case MainProjectOptionEnum.Student:
-                    int optionStudent;
-                    Console.WriteLine("****Student******");
-                    Console.WriteLine("\t1. View");
-                    Console.WriteLine("\t2. Account Transaction");
-                    Console.WriteLine("\t3. Exit ");
-                    optionStudent = Convert.ToInt32(Console.ReadLine());
-
-                    switch (optionStudent)
-                    {
-                        case 1:
-                            Console.WriteLine("******Student List*******");
-                            foreach (Student student in studentList)
-                            {
-                                student.Display();
-                            }
-                            break;
-
-                        case 2:
-
-                            break;
-
-                        case 3:
-                            //exit
-                            break;
-                    }
+                    studentOperations.HandleMenuItems();
                     break;
 
                 case MainProjectOptionEnum.Equipment:
 
-                    DisplayEquipmentMenu();
-                    int optionEquipment;
-                    optionEquipment = Convert.ToInt32(Console.ReadLine());
-
-                    switch (optionEquipment)
-                    {
-                        case 1:
-                            Console.WriteLine("******Equipment List*******");
-                            foreach (Equipment e in equipmentList)
-                            {
-                                //  e.Display();
-                            }
-                            break;
-
-                        case 2:
-                            AddEquipment(equipmentList);
-                            break;
-
-                        case 3:
-                            DeleteEquipment(equipmentList);
-                            break;
-
-                        case 4:
-                            UpdateEquipment(equipmentList);
-                            break;
-
-                        case 5:
-
-                            break;
-
-                        case 6:
-                            //exit
-                            break;
-                    }
                     break;
 
                 case MainProjectOptionEnum.Rentals:
@@ -180,17 +125,6 @@ namespace finalProject
             Console.WriteLine("\t5. Exit ");
         }
 
-        private static void DisplayEquipmentMenu()
-        {
-            Console.WriteLine("****Equipment******");
-            Console.WriteLine("\t1. View");
-            Console.WriteLine("\t2. Add");
-            Console.WriteLine("\t3. Delete");
-            Console.WriteLine("\t4. Update");
-            Console.WriteLine("\t5. Report");
-            Console.WriteLine("\t6. Exit ");
-        }
-
         private static void DisplayStaffMaintanenceMenu()
         {
             Console.WriteLine("****Staff******");
@@ -213,34 +147,7 @@ namespace finalProject
             Console.WriteLine("\t Enter An Option");
         }
 
-        private static List<Equipment> GetEquipment()
-
-        {
-            var equipmentList = new List<Equipment>();
-            if (File.Exists("equipment.txt"))
-            {
-                using (StreamReader equipmentFile = new StreamReader("equipment.txt"))
-                {
-                    while (!equipmentFile.EndOfStream)
-                    {
-                        string equipments = equipmentFile.ReadLine();
-                        string[] equipmentdetails = equipments.Split(' ');
-                        Equipment equipment = new Equipment();
-                        equipment.ID = equipmentdetails[0];
-                        equipment.Type = equipmentdetails[1];
-                        equipment.MaxRentalDays = int.Parse(equipmentdetails[2]);
-                        equipment.Description = equipmentdetails[3];
-                        equipmentList.Add(equipment);
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("files is missing....");
-                Console.ReadLine();
-            }
-            return equipmentList;
-        }
+        
 
         private static List<Staff> GetStuffMembers()
         {
@@ -272,35 +179,7 @@ namespace finalProject
             return staffList;
         }
 
-        private static List<Student> GetStudents()
-        {
-            var studentList = new List<Student>();
-            if (File.Exists("student.txt"))
-            {
-                using (StreamReader studentFile = new StreamReader("student.txt"))
-                {
-                    while (!studentFile.EndOfStream)
-                    {
-                        string studentS = studentFile.ReadLine();
-                        string[] studentdetails = studentS.Split(' ');
-                        Student student = new Student();
-                        student.IdNumber = studentdetails[0];
-                        student.FirstName = studentdetails[1];
-                        student.Surname = studentdetails[2];
-                        student.Course = studentdetails[3];
-                        studentList.Add(student);
-                    }
-                }
-            }
-            else
-            {
-                // we can log error here displap mesage
-                Console.WriteLine("files is missing....");
-                Console.ReadLine();
-            }
-
-            return studentList;
-        }
+        
 
         public static bool login(string username, string password, List<Staff> staff)
         {
@@ -336,27 +215,6 @@ namespace finalProject
             staffmember.Display();
         }
 
-        public static void AddEquipment(List<Equipment> equipment)
-        {
-            Console.Write("Enter ID : ");
-            string id = Console.ReadLine();
-            Console.Write("Enter Type : ");
-            string type = Console.ReadLine();
-            Console.Write("Enter Max Rental Days : ");
-            string reantal = Console.ReadLine();
-            Console.Write("Enter Description: ");
-            string descritpion = Console.ReadLine();
-
-            Equipment newequipment = new Equipment
-            {
-                Description = descritpion,
-                ID = id,
-                MaxRentalDays = int.Parse(reantal),
-                Type = type
-            };
-
-            equipment.Add(newequipment);
-        }
 
         public static void DeleteStaff(List<Staff> staff)
         {
@@ -375,22 +233,6 @@ namespace finalProject
             }
         }
 
-        public static void DeleteEquipment(List<Equipment> equipment)
-        {
-            Console.Write("Enter Equipment ID : ");
-            string id = Console.ReadLine();
-
-            foreach (Equipment e in equipment)
-            {
-                if (e.ID == id)
-                {
-                    // e.Display();
-                    equipment.Remove(e);
-                    Console.WriteLine("Equipment Removed");
-                    break;
-                }
-            }
-        }
 
         public static void UpdateStaff(List<Staff> staff)
         {
@@ -420,52 +262,6 @@ namespace finalProject
             }
         }
 
-        public static void UpdateEquipment(List<Equipment> equipment)
-        {
-
-            //////////////////////////////////////////
-
-            var devicesDic = new Dictionary<string, Equipment>();
-            foreach (var item in equipment)
-            {
-                devicesDic.Add(item.ID, item);
-            }
-
-            //check if we have id
-            var idGotFromUser = "abc";
-            var exists = devicesDic.ContainsKey(idGotFromUser);
-            if (exists)
-            {
-                devicesDic[idGotFromUser].Type = "newValue";
-            }
-            else {
-                Console.WriteLine($"Cannot find item with ID:{idGotFromUser}");
-            }
-
-            //////////////////////////////////////////
-            Console.Write("Enter Equipment ID : ");
-            string id = Console.ReadLine();
-            var prompt = "Enter nw walue, ENTER for no change";
-
-            var device = equipment.FirstOrDefault(a => a.ID == id);
-
-            Console.WriteLine($"Current type: {device.Type}");
-            Console.Write(prompt);
-            string type = Console.ReadLine();
-            Console.Write("Enter Max Rental Days : ");
-            string reantal = Console.ReadLine();
-            Console.Write("Enter Description: ");
-            string descritpion = Console.ReadLine();
-
-            Equipment newequipment = new Equipment
-            {
-                Description = descritpion,
-                ID = id,
-                MaxRentalDays = int.Parse(reantal),
-                Type = type
-            };
-
-            equipment.Add(newequipment);
-        }
+ 
     }
 }
