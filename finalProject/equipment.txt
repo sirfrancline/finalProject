@@ -1,14 +1,13 @@
-K00207141,Electronic,Elegoo UNO Starter Kit
-K00207142,Electronic,Arduino UNO R2 
-K00207143,Electronic,Arduino UNO R3 Sensor Kit,
-K00207144,Electronic,HTC Vive VR Headset
-K00207145,Electronic,Amazon Echo Black 
-K00207146,Electronic,Besteker Portable Video Camera 
-K00207147,Electronic,FDR-X3000 Camera 
-K00207148,Electronic,HTC Desire 530 Grey
-K00207149,Electronic,Canon EOS 1300D
-K00207150,Motor,Besteker Portable Video Camera
-K00207151,Motor,FDR-X3000 Camera 
-K00207152,Motor,HTC Desire 530 Grey 
-K00207153,Motor,Canon EOS 1300D  
-
+K00207141,Electronic,3,Elegoo UNO Starter Kit
+K00207142,Electronic,3,Arduino UNO R2 
+K00207143,Electronic,3,Arduino UNO R3 Sensor Kit,
+K00207144,Electronic,3,HTC Vive VR Headset
+K00207145,Electronic,3,Amazon Echo Black 
+K00207146,Electronic,3,Besteker Portable Video Camera 
+K00207147,Electronic,3,FDR-X3000 Camera 
+K00207148,Electronic,3,HTC Desire 530 Grey
+K00207149,Electronic,3,Canon EOS 1300D
+K00207150,Motor,2,Besteker Portable Video Camera
+K00207151,Motor,2,FDR-X3000 Camera 
+K00207152,Motor,2,HTC Desire 530 Grey 
+K00207153,Motor,2,Canon EOS 1300D  

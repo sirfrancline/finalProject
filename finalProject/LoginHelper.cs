@@ -10,9 +10,9 @@ namespace finalProject
     public static class LoginHelper
     {
 
-        public static SecureString GetPassword()
+        public static string GetPassword()
         {
-            var pwd = new SecureString();
+            var pwd =string.Empty;
             while (true)
             {
                 ConsoleKeyInfo i = Console.ReadKey(true);
@@ -24,13 +24,13 @@ namespace finalProject
                 {
                     if (pwd.Length > 0)
                     {
-                        pwd.RemoveAt(pwd.Length - 1);
+                    pwd =     pwd.Substring(0,pwd.Length - 1);
                         Console.Write("\b \b");
                     }
                 }
                 else
                 {
-                    pwd.AppendChar(i.KeyChar);
+                    pwd += (i.KeyChar);
                     Console.Write("*");
                 }
             }

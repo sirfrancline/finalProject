@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace finalProject
 {
-    class Booking :IBooking
+    class Booking  
     {
         string EquipmentID { get; set; }
         string StudentId { get; set; }

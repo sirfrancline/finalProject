@@ -25,7 +25,7 @@ namespace finalProject
                     while (!equipmentFile.EndOfStream)
                     {
                         var equipments = equipmentFile.ReadLine();
-                        var equipmentdetails = equipments.Split(' ');
+                        var equipmentdetails = equipments.Split(',');
                         var equipment = new Equipment
                         {
                             ID = equipmentdetails[0],

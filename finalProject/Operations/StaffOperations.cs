@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace finalProject
 {
@@ -171,8 +172,8 @@ namespace finalProject
         public bool IsUserAuthorised()
         {
             Console.WriteLine("Please provide login");
-            var user = Console.ReadLine();
-            if (string.IsNullOrEmpty(user))
+            var loginName = Console.ReadLine();
+            if (string.IsNullOrEmpty(loginName))
             {
                 return false;
             }
@@ -181,9 +182,10 @@ namespace finalProject
             var password = LoginHelper.GetPassword();
             var authorised = false;
 
-            if (_staffList.ContainsKey(user))
+            var user = _staffList.FirstOrDefault(s=>s.Value.Username==loginName);
+            if (user.Value!=null)
             {
-                authorised = _staffList[user].Password == password.ToString();
+                authorised = _staffList[user.Value.IdNumber].Password == password;
             }
 
             return authorised;
