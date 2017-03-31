@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace finalProject
 {
-public  class EquimpmentOperations
+    public class EquimpmentOperations
     {
-        Dictionary<string, Equipment> _equipmentList;
+        private Dictionary<string, Equipment> _equipmentList;
         private string _prompt;
 
         public void Start(string fileName)
@@ -69,9 +66,8 @@ public  class EquimpmentOperations
         }
 
 
-        private  void DisplayEquipmentMenu()
+        private void DisplayEquipmentMenu()
         {
-            
             Console.WriteLine("****Equipment******");
             Console.WriteLine("\t1. View");
             Console.WriteLine("\t2. Add");
@@ -82,7 +78,7 @@ public  class EquimpmentOperations
         }
 
 
-        public  void AddEquipment()
+         void AddEquipment()
         {
             Console.Write("Enter ID: ");
             var id = Console.ReadLine();
@@ -141,10 +137,9 @@ public  class EquimpmentOperations
                     //exit
                     break;
             }
-
         }
 
-        public  void UpdateEquipment()
+         void UpdateEquipment()
         {
             Console.Write("Enter Equipment ID : ");
             var idGotFromUser = Console.ReadLine();
@@ -154,11 +149,11 @@ public  class EquimpmentOperations
             if (exists)
             {
                 var device = _equipmentList[idGotFromUser];
-                 _prompt = "Provide new walue, ENTER for no change:";
+                _prompt = "Provide new walue, ENTER for no change:";
 
-                UpdateType          ( idGotFromUser);
-                UpdateRental        ( idGotFromUser);
-                UpdateDescription   ( idGotFromUser);
+                UpdateType(idGotFromUser);
+                UpdateRental(idGotFromUser);
+                UpdateDescription(idGotFromUser);
             }
             else
             {
@@ -166,9 +161,8 @@ public  class EquimpmentOperations
             }
         }
 
-        private void UpdateDescription( string idGotFromUser)
+        private void UpdateDescription(string idGotFromUser)
         {
-
             Console.Write("Enter Description: ");
             var descritpion = Console.ReadLine();
 
@@ -189,9 +183,7 @@ public  class EquimpmentOperations
             Console.WriteLine(_prompt);
             var type = Console.ReadLine();
             if (!string.IsNullOrWhiteSpace(type))
-            {
                 _equipmentList[idGotFromUser].Type = type;
-            }
         }
     }
 }

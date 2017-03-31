@@ -70,6 +70,7 @@
     <Compile Include="EquimpmentOperations.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="IBooking.cs" />
+    <Compile Include="LoginHelper.cs" />
     <Compile Include="MainProjectOptionEnum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

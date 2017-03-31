@@ -9,17 +9,23 @@ namespace finalProject
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            var _staffOperations = new StaffOperations();
+            _staffOperations.Start("staff.txt");
 
-            var collegeHelpDesk = new CollegeEquipmentControl();
-
-            while(true)
-
+            if (_staffOperations.IsUserAuthorised())
             {
-
-                collegeHelpDesk.EntryPoint();
-
+                var collegeHelpDesk = new CollegeEquipmentControl();
+                while (true)
+                    {
+                    collegeHelpDesk.EntryPoint();
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Bad user/password");
             }
         }
     }

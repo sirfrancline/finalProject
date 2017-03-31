@@ -94,25 +94,5 @@ namespace finalProject
             Console.WriteLine("\t5. Exit ");
             Console.WriteLine("\t Enter An Option");
         }
-
-        
-
-        public static bool Login(string username, string password, List<Staff> staff)
-        {
-            foreach (Staff s in staff)
-            {
-                if (s.Username == username && s.Password == password)
-                {
-                    Console.WriteLine("Successful Login");
-                    return true;
-                }
-            }
-
-            Console.WriteLine("Invalid login");
-            return false;
-        }
-
- 
- 
     }
 }

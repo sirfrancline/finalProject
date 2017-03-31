@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace finalProject
 {
-public    class StaffOperations
+    public class StaffOperations
     {
-        Dictionary<string, Staff> _staffList;
+        private Dictionary<string, Staff> _staffList;
+
         public void Start(string fileName)
         {
             _staffList = GetStuffMembers(fileName);
@@ -26,9 +24,7 @@ public    class StaffOperations
                 case 1:
                     Console.WriteLine("******Staff List*******");
                     foreach (var s in _staffList)
-                    {
                         s.Value.Display();
-                    }
                     break;
 
                 case 2:
@@ -49,7 +45,7 @@ public    class StaffOperations
             }
         }
 
-        public  void AddStaff()
+        void AddStaff()
         {
             Console.Write("Enter First Name : ");
             var fname = Console.ReadLine();
@@ -63,13 +59,13 @@ public    class StaffOperations
             var passwordstaff = Console.ReadLine();
 
             var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
-            _staffList.Add(staffmember.IdNumber,staffmember);
+            _staffList.Add(staffmember.IdNumber, staffmember);
 
             staffmember.Display();
         }
 
 
-        public  void DeleteStaff()
+        void DeleteStaff()
         {
             Console.Write("Enter Staff ID: ");
             var id = Console.ReadLine();
@@ -84,40 +80,51 @@ public    class StaffOperations
             {
                 Console.WriteLine($"Cannot find this id:{id}");
             }
-
         }
 
 
-        public  void UpdateStaff(List<Staff> staff)
+       void UpdateStaff()
         {
-            Console.Write("Enter Staff ID : ");
-            var id = Console.ReadLine();
+            Console.WriteLine("Enter Staff ID : ");
+            var idGotFromUser = Console.ReadLine();
 
-            foreach (var s in staff)
+            //check if we have id
+            var exists = _staffList.ContainsKey(idGotFromUser);
+            if (exists)
             {
-                if (s.IdNumber == id)
-                {
-                    staff.Remove(s);
-                    Console.Write("Enter First Name : ");
-                    var fname = Console.ReadLine();
-                    Console.Write("Enter Last Name : ");
-                    var surname = Console.ReadLine();
-                    Console.Write("Enter Staff Username : ");
-                    var usernamestaff = Console.ReadLine();
-                    Console.Write("Enter Staff Password : ");
-                    var passwordstaff = Console.ReadLine();
+                /* this is pattern to follow
+                                var device = _equipmentList[idGotFromUser];
+                                _prompt = "Provide new walue, ENTER for no change:";
 
-                    var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
-                    staff.Add(staffmember);
+                                UpdateType(idGotFromUser);
+                                UpdateRental(idGotFromUser);
+                                UpdateDescription(idGotFromUser);
+                  */
 
-                    staffmember.Display();
-                    break;
-                }
+                /* 
+
+
+
+                        staff.Remove(s);
+                        Console.Write("Enter First Name : ");
+                        var fname = Console.ReadLine();
+                        Console.Write("Enter Last Name : ");
+                        var surname = Console.ReadLine();
+                        Console.Write("Enter Staff Username : ");
+                        var usernamestaff = Console.ReadLine();
+                        Console.Write("Enter Staff Password : ");
+                        var passwordstaff = Console.ReadLine();
+
+                        var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
+                        staff.Add(staffmember);
+
+                 */
+            }
+            else
+            {
+                Console.WriteLine($"Cannot find item with ID:{idGotFromUser}");
             }
         }
-
-
-
 
 
         private Dictionary<string, Staff> GetStuffMembers(string fileName)
@@ -161,5 +168,26 @@ public    class StaffOperations
             Console.WriteLine("\t5. Exit ");
         }
 
+        public bool IsUserAuthorised()
+        {
+            Console.WriteLine("Please provide login");
+            var user = Console.ReadLine();
+            if (string.IsNullOrEmpty(user))
+            {
+                return false;
+            }
+            
+            Console.WriteLine("Please provide password");
+            var password = LoginHelper.GetPassword();
+            var authorised = false;
+
+            if (_staffList.ContainsKey(user))
+            {
+                authorised = _staffList[user].Password == password.ToString();
+            }
+
+            return authorised;
+
+        }
     }
 }
