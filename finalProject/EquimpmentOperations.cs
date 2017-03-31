@@ -9,11 +9,12 @@ namespace finalProject
 {
 public  class EquimpmentOperations
     {
-        Dictionary<string, Equipment> equipmentList;
+        Dictionary<string, Equipment> _equipmentList;
+        private string _prompt;
 
         public void Start(string fileName)
         {
-            equipmentList = GetEquipment(fileName);
+            _equipmentList = GetEquipment(fileName);
         }
 
         private Dictionary<string, Equipment> GetEquipment(string fileName)
@@ -50,26 +51,27 @@ public  class EquimpmentOperations
         }
 
 
-        public static void DeleteEquipment(List<Equipment> equipment)
+        public void DeleteEquipment()
         {
             Console.Write("Enter Equipment ID : ");
             var id = Console.ReadLine();
 
-            foreach (var e in equipment)
+            if (_equipmentList.ContainsKey(id))
             {
-                if (e.ID == id)
-                {
-                    // e.Display();
-                    equipment.Remove(e);
-                    Console.WriteLine("Equipment Removed");
-                    break;
-                }
+                _equipmentList.Remove(id);
+                Console.WriteLine("Equipment Removed");
+                // save that to flat file
+            }
+            else
+            {
+                Console.WriteLine($"Cannot find this id:{id}");
             }
         }
 
 
-        private static void DisplayEquipmentMenu()
+        private  void DisplayEquipmentMenu()
         {
+            
             Console.WriteLine("****Equipment******");
             Console.WriteLine("\t1. View");
             Console.WriteLine("\t2. Add");
@@ -80,13 +82,13 @@ public  class EquimpmentOperations
         }
 
 
-        public static void AddEquipment()
+        public  void AddEquipment()
         {
-            Console.Write("Enter ID : ");
+            Console.Write("Enter ID: ");
             var id = Console.ReadLine();
             Console.Write("Enter Type : ");
             var type = Console.ReadLine();
-            Console.Write("Enter Max Rental Days : ");
+            Console.Write("Enter Max Rental Days: ");
             var reantal = Console.ReadLine();
             Console.Write("Enter Description: ");
             var descritpion = Console.ReadLine();
@@ -99,21 +101,21 @@ public  class EquimpmentOperations
                 Type = type
             };
 
-            equipment.Add(newequipment);
+            _equipmentList.Add(newequipment.ID, newequipment);
         }
 
 
         public void HandleMenuItems()
         {
+            Console.Clear();
             DisplayEquipmentMenu();
-            int optionEquipment;
-            optionEquipment = Convert.ToInt32(Console.ReadLine());
+            var optionEquipment = Helpers.GetIntegerOptionFromUser(1, 6);
 
             switch (optionEquipment)
             {
                 case 1:
                     Console.WriteLine("******Equipment List*******");
-                    foreach (var e in equipmentList)
+                    foreach (var e in _equipmentList)
                     {
                         //  e.Display();
                     }
@@ -142,53 +144,54 @@ public  class EquimpmentOperations
 
         }
 
-        public static void UpdateEquipment(List<Equipment> equipment)
+        public  void UpdateEquipment()
         {
-
-            //////////////////////////////////////////
-
-            var devicesDic = new Dictionary<string, Equipment>();
-            foreach (var item in equipment)
-            {
-                devicesDic.Add(item.ID, item);
-            }
+            Console.Write("Enter Equipment ID : ");
+            var idGotFromUser = Console.ReadLine();
 
             //check if we have id
-            var idGotFromUser = "abc";
-            var exists = devicesDic.ContainsKey(idGotFromUser);
+            var exists = _equipmentList.ContainsKey(idGotFromUser);
             if (exists)
             {
-                devicesDic[idGotFromUser].Type = "newValue";
+                var device = _equipmentList[idGotFromUser];
+                 _prompt = "Provide new walue, ENTER for no change:";
+
+                UpdateType          ( idGotFromUser);
+                UpdateRental        ( idGotFromUser);
+                UpdateDescription   ( idGotFromUser);
             }
             else
             {
                 Console.WriteLine($"Cannot find item with ID:{idGotFromUser}");
             }
+        }
 
-            //////////////////////////////////////////
-            Console.Write("Enter Equipment ID : ");
-            var id = Console.ReadLine();
-            var prompt = "Enter nw walue, ENTER for no change";
+        private void UpdateDescription( string idGotFromUser)
+        {
 
-            var device = equipment.FirstOrDefault(a => a.ID == id);
-
-            Console.WriteLine($"Current type: {device.Type}");
-            Console.Write(prompt);
-            var type = Console.ReadLine();
-            Console.Write("Enter Max Rental Days : ");
-            var reantal = Console.ReadLine();
             Console.Write("Enter Description: ");
             var descritpion = Console.ReadLine();
 
-            var newequipment = new Equipment
-            {
-                Description = descritpion,
-                ID = id,
-                MaxRentalDays = int.Parse(reantal),
-                Type = type
-            };
+            throw new NotImplementedException();
+        }
 
-            equipment.Add(newequipment);
+        private void UpdateRental(string idGotFromUser)
+        {
+            Console.Write("Enter Max Rental Days : ");
+            var reantal = Helpers.GetIntegerOptionFromUser(1, 10);
+
+            throw new NotImplementedException();
+        }
+
+        private void UpdateType(string idGotFromUser)
+        {
+            Console.WriteLine($"Current type: {_equipmentList[idGotFromUser].Type}");
+            Console.WriteLine(_prompt);
+            var type = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(type))
+            {
+                _equipmentList[idGotFromUser].Type = type;
+            }
         }
     }
 }
