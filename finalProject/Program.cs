@@ -12,8 +12,9 @@ namespace finalProject
 
         static void Main(string[] args)
         {
+            // read password from text file
             var _staffOperations = new StaffOperations();
-            _staffOperations.Start("staff.txt");
+            _staffOperations.Start(@"TextFiles\staff.txt");
 
             if (_staffOperations.IsUserAuthorised())
             {

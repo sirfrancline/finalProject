@@ -47,16 +47,16 @@
   <ItemGroup>
     <Compile Include="classes\Booking.cs" />
     <Compile Include="classes\Equipment.cs" />
-    <Compile Include="classes\equipment_Status.cs">
+    <Compile Include="GUI\equipment_Status.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classes\equipment_Status.Designer.cs">
+    <Compile Include="GUI\equipment_Status.Designer.cs">
       <DependentUpon>equipment_Status.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\Login.cs">
+    <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classes\Login.Designer.cs">
+    <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\Person.cs" />
@@ -66,7 +66,7 @@
     <Compile Include="classes\viewAddDeleteUpdateEquipment.Designer.cs">
       <DependentUpon>viewAddDeleteUpdateEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="CollegeEquipmentControl.cs" />
+    <Compile Include="Operations\CollegeEquipmentControl.cs" />
     <Compile Include="Operations\EquimpmentOperations.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="LoginHelper.cs" />
@@ -76,22 +76,22 @@
     <Compile Include="classes\Staff.cs" />
     <Compile Include="Operations\StaffOperations.cs" />
     <Compile Include="Operations\RentalOperations.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="classes\Student.cs" />
     <Compile Include="Operations\StudentOperations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="student.txt">
+    <None Include="TextFiles\student.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="classes\equipment_Status.resx">
+    <EmbeddedResource Include="GUI\equipment_Status.resx">
       <DependentUpon>equipment_Status.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="classes\Login.resx">
+    <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="classes\viewAddDeleteUpdateEquipment.resx">
@@ -99,10 +99,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="equipment.txt">
+    <Content Include="TextFiles\equipment.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="staff.txt">
+    <Content Include="TextFiles\staff.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

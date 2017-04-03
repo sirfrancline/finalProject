@@ -42,10 +42,10 @@ namespace finalProject
 
         private void Initialise()
         {
-            _studentOperations.Start("student.txt");
-            _equipmentOperations.Start("equipment.txt");
-            _staffOperations.Start("staff.txt");
-            _rentalOperations.Start("rental.csv");
+            _studentOperations.Start(@"TextFiles\student.txt");
+            _equipmentOperations.Start(@"TextFiles\equipment.txt");
+            _staffOperations.Start(@"TextFiles\staff.txt");
+            _rentalOperations.Start(@"TextFiles\rental.csv");
         }
 
       
