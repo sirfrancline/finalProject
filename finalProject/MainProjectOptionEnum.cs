@@ -9,11 +9,11 @@ namespace finalProject
     public enum MainProjectOptionEnum
     {
 
-        Login =1,
-        Staff =2,
-        Student= 3,
-        Equipment =4,
-        Rentals = 5,
-        Exit = 6
+      
+        Staff =1,
+        Student= 2,
+        Equipment =3,
+        Rentals = 4,
+        Exit = 5
     }
 }

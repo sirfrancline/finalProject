@@ -15,10 +15,11 @@ namespace finalProject
         {
 
         }
-        public Staff(string id, string fname, string lastname, string username, string password) : base(fname, lastname, id)
+        public Staff(string id, string fname, string surName, string username, string password) : base(fname, surName, id)
         {
             this.Username = username;
             this.Password = password;
+          
         }
         public override void Display()
         {

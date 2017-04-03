@@ -7,7 +7,8 @@ namespace finalProject
 {
     public class StaffOperations
     {
-        private Dictionary<string, Staff> _staffList;
+      private Dictionary<string, Staff> _staffList;
+        private string _prompt;
 
         public void Start(string fileName)
         {
@@ -24,8 +25,8 @@ namespace finalProject
             {
                 case 1:
                     Console.WriteLine("******Staff List*******");
-                    foreach (var s in _staffList)
-                        s.Value.Display();
+                    foreach (var staff in _staffList)
+                        staff.Value.Display();
                     break;
 
                 case 2:
@@ -93,33 +94,15 @@ namespace finalProject
             var exists = _staffList.ContainsKey(idGotFromUser);
             if (exists)
             {
-                /* this is pattern to follow
-                                var device = _equipmentList[idGotFromUser];
-                                _prompt = "Provide new walue, ENTER for no change:";
+                                var staff = _staffList[idGotFromUser];
+                                 _prompt = "Provide new walue, ENTER for no change:";
 
-                                UpdateType(idGotFromUser);
-                                UpdateRental(idGotFromUser);
-                                UpdateDescription(idGotFromUser);
-                  */
-
-                /* 
-
-
-
-                        staff.Remove(s);
-                        Console.Write("Enter First Name : ");
-                        var fname = Console.ReadLine();
-                        Console.Write("Enter Last Name : ");
-                        var surname = Console.ReadLine();
-                        Console.Write("Enter Staff Username : ");
-                        var usernamestaff = Console.ReadLine();
-                        Console.Write("Enter Staff Password : ");
-                        var passwordstaff = Console.ReadLine();
-
-                        var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
-                        staff.Add(staffmember);
-
-                 */
+                                Firstname (idGotFromUser);
+                                Surname(idGotFromUser);
+                                Username(idGotFromUser);
+                                Password(idGotFromUser);
+                
+                
             }
             else
             {
@@ -190,6 +173,34 @@ namespace finalProject
 
             return authorised;
 
+        }
+
+        private void Firstname(string idGotFromUser)
+        {
+            Console.Write("Enter  firstname: ");
+            var firstName = Console.ReadLine();
+
+            throw new NotImplementedException();
+        }
+        private void Surname(string idGotFromUser)
+        {
+            Console.Write("Enter  Surname: ");
+            var surName = Console.ReadLine();
+
+            throw new NotImplementedException();
+        }
+        private void Username(string idGotFromUser)
+        {
+            Console.Write("Enter  new username: ");
+            var userName = Console.ReadLine();
+
+            throw new NotImplementedException();
+        }
+        private void Password(string idGotFromUser)
+        {
+            Console.Write("Enter  new password: ");
+            var newPassword = Console.ReadLine();
+           throw new NotImplementedException();
         }
     }
 }

@@ -5,29 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace finalProject
+     
 {
-    class Booking  
+    public class Booking  
     {
-        string EquipmentID { get; set; }
-        string StudentId { get; set; }
-        string Fname { get; set; }
-        string LastName { get; set; }
-        DateTime IssueDate { get; set; }
-        DateTime ReturnDate { get; set; }
-
-        public Booking(string EId, string SId, string fname, string surname, DateTime issue, DateTime returnDate)
-        {
-            this.EquipmentID = EId;
-            this.StudentId = SId;
-            this.Fname = fname;
-            this.LastName = surname;
-            this.IssueDate = issue;
-            this.ReturnDate = returnDate;
-        }
-
-        public void Display()
-        {
-            Console.WriteLine(EquipmentID + " " + StudentId + " " + Fname + " " + LastName + " " + IssueDate + " " + ReturnDate);
-        }
+      public  string EquipmentID { get; set; }
+      public  string StudentId { get; set; }
+      public  string EmployeeId { get; set; }
+      public  DateTime IssueDate { get; set; }
+      public  DateTime ReturnDate { get; set; }
+      public bool IsReturned { get; set; }       
+        
     }
 }
+
+

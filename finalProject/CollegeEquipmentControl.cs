@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace finalProject
 {
@@ -10,21 +7,20 @@ namespace finalProject
         private readonly StudentOperations _studentOperations = new StudentOperations();
         private readonly EquimpmentOperations _equipmentOperations = new EquimpmentOperations();
         private readonly StaffOperations _staffOperations = new StaffOperations();
+        private  RentalOperations _rentalOperations = new RentalOperations();
 
         public void EntryPoint()
         {
             Initialise();
             Console.Clear();
             DisplayMainMenu();
-            var option = (MainProjectOptionEnum)Helpers.GetIntegerOptionFromUser(1, 6);
+            var option = (MainProjectOptionEnum)Helpers.GetIntegerOptionFromUser(1, 5);
 
             switch (option)
             {
-                case MainProjectOptionEnum.Login:
-                    break;
-
+                
                 case MainProjectOptionEnum.Staff:
-                    _staffOperations.HandleMenuItems();        
+                    _staffOperations.HandleMenuItems();
                     break;
 
                 case MainProjectOptionEnum.Student:
@@ -36,27 +32,6 @@ namespace finalProject
                     break;
 
                 case MainProjectOptionEnum.Rentals:
-                    DisplayRentalMenu();
-                    int optionBookings;
-                    optionBookings = Helpers.GetIntegerOptionFromUser(1, 5);
-                    switch (optionBookings)
-                    {
-                        case 1:
-                            break;
-
-                        case 2:
-                            break;
-
-                        case 3:
-                            break;
-
-                        case 4:
-                            break;
-
-                        case 5:
-                            //exit
-                            break;
-                    }
                     break;
 
                 case MainProjectOptionEnum.Exit:
@@ -70,19 +45,10 @@ namespace finalProject
             _studentOperations.Start("student.txt");
             _equipmentOperations.Start("equipment.txt");
             _staffOperations.Start("staff.txt");
+            _rentalOperations.Start("rental.csv");
         }
 
-
-        private static void DisplayRentalMenu()
-        {
-            Console.WriteLine("****Booking******");
-            Console.WriteLine("\t1. Reserve");
-            Console.WriteLine("\t2. Issue");
-            Console.WriteLine("\t3. Returns");
-            Console.WriteLine("\t4. Overdue Equipment");
-            Console.WriteLine("\t5. Exit ");
-        }
-
+      
 
         private static void DisplayMainMenu()
         {
