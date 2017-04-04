@@ -7,6 +7,8 @@ namespace finalProject
     public class EquimpmentOperations
     {
         private Dictionary<string, Equipment> _equipmentList;
+
+        public Dictionary<string, Equipment> EquipmentList { get { return _equipmentList; } }
         private string _prompt;
 
         public void Start(string fileName)
@@ -47,7 +49,6 @@ namespace finalProject
             return equipmentList;
         }
 
-
         public void DeleteEquipment()
         {
             Console.Write("Enter Equipment ID : ");
@@ -65,7 +66,6 @@ namespace finalProject
             }
         }
 
-
         private void DisplayEquipmentMenu()
         {
             Console.WriteLine("****Equipment******");
@@ -77,8 +77,7 @@ namespace finalProject
             Console.WriteLine("\t6. Exit ");
         }
 
-
-         void AddEquipment()
+        private void AddEquipment()
         {
             Console.Write("Enter ID: ");
             var id = Console.ReadLine();
@@ -99,7 +98,6 @@ namespace finalProject
 
             _equipmentList.Add(newequipment.ID, newequipment);
         }
-
 
         public void HandleMenuItems()
         {
@@ -139,7 +137,7 @@ namespace finalProject
             }
         }
 
-         void UpdateEquipment()
+        private void UpdateEquipment()
         {
             Console.Write("Enter Equipment ID : ");
             var idGotFromUser = Console.ReadLine();

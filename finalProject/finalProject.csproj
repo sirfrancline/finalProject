@@ -83,6 +83,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="TextFiles\rental.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TextFiles\student.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

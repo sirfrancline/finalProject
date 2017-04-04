@@ -7,7 +7,7 @@ namespace finalProject
         private readonly StudentOperations _studentOperations = new StudentOperations();
         private readonly EquimpmentOperations _equipmentOperations = new EquimpmentOperations();
         private readonly StaffOperations _staffOperations = new StaffOperations();
-        private  RentalOperations _rentalOperations = new RentalOperations();
+        private  RentalOperations _rentalOperations ;
 
         public void EntryPoint()
         {
@@ -32,6 +32,7 @@ namespace finalProject
                     break;
 
                 case MainProjectOptionEnum.Rentals:
+                    _rentalOperations.HandleMenuItems();
                     break;
 
                 case MainProjectOptionEnum.Exit:
@@ -42,6 +43,7 @@ namespace finalProject
 
         private void Initialise()
         {
+            _rentalOperations = new RentalOperations(_equipmentOperations);
             _studentOperations.Start(@"TextFiles\student.txt");
             _equipmentOperations.Start(@"TextFiles\equipment.txt");
             _staffOperations.Start(@"TextFiles\staff.txt");

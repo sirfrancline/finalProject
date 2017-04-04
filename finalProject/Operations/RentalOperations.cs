@@ -2,26 +2,24 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace finalProject
 {
-    
- 
     public class RentalOperations
     {
-        private Dictionary<string, Booking> _BookingList;
-        public void Start()
+        private List<Booking> _bookingList;
+        private EquimpmentOperations _equipmentOperations;
+
+        public RentalOperations(EquimpmentOperations equipmentOperations)
         {
-           // var booking = new Booking(string EId, string SId, string fname, string surname, DateTime issue, DateTime returnDate);
+           _equipmentOperations = equipmentOperations;
         }
+
         public void HandleMenuItems()
         {
             int optionRental;
             DisplayRentalMenu();
-           
-                            
+
             optionRental = Helpers.GetIntegerOptionFromUser(1, 5);
             switch (optionRental)
             {
@@ -35,22 +33,26 @@ namespace finalProject
                     break;
 
                 case 4:
+                    DisplayOverdue();
                     break;
 
                 case 5:
                     //exit
                     break;
             }
-          
+        }
 
+        private void DisplayOverdue()
+        {
+            var overDue = _bookingList.Where(a => a.ReturnDate < DateTime.Now).ToList();
 
+            foreach (var item in overDue)
+            {
+                Console.WriteLine($"item: {item.StudentId}");
+            }
 
-
-
-
-
-
-
+            Console.WriteLine("Pres enter to coontinue...");
+            Console.ReadLine();
         }
 
         private static void DisplayRentalMenu()
@@ -62,58 +64,53 @@ namespace finalProject
             Console.WriteLine("\t4. Overdue Equipment");
             Console.WriteLine("\t5. Exit ");
         }
-       public static void Reserve()
+
+        public static void Reserve()
 
         {
-
             //if (IsReturned == true)
             //{
-                
-
             //}
-            
-
-
         }
 
         internal void Start(string fileName)
         {
-            GetRentals(fileName);
+            _bookingList = GetRentals(fileName);
         }
 
-        private void GetRentals(string fileName)
+        private List<Booking> GetRentals(string fileName)
         {
-            var students = new Dictionary<string, Student>();
+            var rentals = new List<Booking>();
             if (File.Exists(fileName))
             {
-                using (var studentFile = new StreamReader(fileName))
+                using (var rentalFile = new StreamReader(fileName))
                 {
-                    while (!studentFile.EndOfStream)
+                    while (!rentalFile.EndOfStream)
                     {
-                        var line = studentFile.ReadLine();
-                        var studentdetails = line.Split(' ');
-                        var student = new Student
+                        var line = rentalFile.ReadLine();
+                        var rental = line.Split(',');
+                        var booking = new Booking
                         {
-                            IdNumber = studentdetails[0],
-                            FirstName = studentdetails[1],
-                            Surname = studentdetails[2],
-                            Course = studentdetails[3]
+                            EmployeeId = rental[0],
+                            EquipmentID = rental[1],
+                            IsReturned = rental[2] == "true",
+                            IssueDate = DateTime.Parse(rental[3]),
+                            ReturnDate = DateTime.Parse(rental[4]),
+                            StudentId = rental[5],
                         };
 
-                        students.Add(student.IdNumber, student);
+                        rentals.Add(booking);
                     }
                 }
             }
             else
             {
                 // we can log error here displap mesage
-                Console.WriteLine("files is missing....");
+                Console.WriteLine("files is missing....RentalOperations");
                 Console.ReadLine();
             }
 
-            //return students;
+            return rentals;
         }
     }
-
-    
 }

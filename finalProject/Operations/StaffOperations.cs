@@ -57,13 +57,31 @@ namespace finalProject
             var id = Console.ReadLine();
             Console.Write("Enter Staff Username : ");
             var usernamestaff = Console.ReadLine();
+
+
+            // hide emntering passsword by using login helper
             Console.Write("Enter Staff Password : ");
-            var passwordstaff = Console.ReadLine();
+            var passwordstaff = LoginHelper.GetPassword();
+            Console.Write(" Confirm Staff Password : ");
+            var passwordstaffConfirmation = LoginHelper.GetPassword();
 
-            var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
-            _staffList.Add(staffmember.IdNumber, staffmember);
+            if (passwordstaff == passwordstaffConfirmation)
+            {
+                var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
+                _staffList.Add(staffmember.IdNumber, staffmember);
+                staffmember.Display();
 
-            staffmember.Display();
+            }
+            else
+            {
+
+                Console.WriteLine("password doesn't match");
+
+
+            }
+           
+
+            
         }
 
 
@@ -154,6 +172,11 @@ namespace finalProject
 
         public bool IsUserAuthorised()
         {
+
+#if DEBUG
+            return true;
+#endif
+
             Console.WriteLine("Please provide login");
             var loginName = Console.ReadLine();
             if (string.IsNullOrEmpty(loginName))
