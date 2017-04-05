@@ -1,6 +1,6 @@
-﻿using System;
+﻿using finalProject.Persistence.Readers;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace finalProject
@@ -12,7 +12,7 @@ namespace finalProject
 
         public RentalOperations(EquimpmentOperations equipmentOperations)
         {
-           _equipmentOperations = equipmentOperations;
+            _equipmentOperations = equipmentOperations;
         }
 
         public void HandleMenuItems()
@@ -40,7 +40,7 @@ namespace finalProject
                     //exit
                     break;
             }
-        }
+        } 
 
         private void DisplayOverdue()
         {
@@ -75,42 +75,8 @@ namespace finalProject
 
         internal void Start(string fileName)
         {
-            _bookingList = GetRentals(fileName);
-        }
-
-        private List<Booking> GetRentals(string fileName)
-        {
-            var rentals = new List<Booking>();
-            if (File.Exists(fileName))
-            {
-                using (var rentalFile = new StreamReader(fileName))
-                {
-                    while (!rentalFile.EndOfStream)
-                    {
-                        var line = rentalFile.ReadLine();
-                        var rental = line.Split(',');
-                        var booking = new Booking
-                        {
-                            EmployeeId = rental[0],
-                            EquipmentID = rental[1],
-                            IsReturned = rental[2] == "true",
-                            IssueDate = DateTime.Parse(rental[3]),
-                            ReturnDate = DateTime.Parse(rental[4]),
-                            StudentId = rental[5],
-                        };
-
-                        rentals.Add(booking);
-                    }
-                }
-            }
-            else
-            {
-                // we can log error here displap mesage
-                Console.WriteLine("files is missing....RentalOperations");
-                Console.ReadLine();
-            }
-
-            return rentals;
+            var reader = new RentalReader();
+            _bookingList = reader.GetRentals(fileName);
         }
     }
 }

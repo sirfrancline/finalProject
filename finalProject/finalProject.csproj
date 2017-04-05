@@ -55,6 +55,7 @@
     <Compile Include="MainProjectOptionEnum.cs" />
     <Compile Include="Persistence\FileSingleAccessControlObjects\LockObjects.cs" />
     <Compile Include="Persistence\Readers\EquipmentReader.cs" />
+    <Compile Include="Persistence\Readers\RentalReader.cs" />
     <Compile Include="Persistence\Readers\StaffReader.cs" />
     <Compile Include="Persistence\Readers\StudentReader.cs" />
     <Compile Include="Program.cs" />
