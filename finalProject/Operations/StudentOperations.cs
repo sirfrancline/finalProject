@@ -8,10 +8,10 @@ namespace finalProject
     {
         private Dictionary<string, Student> _studentList;
 
-        public void Start(string fileName)
+        public void Start()
         {
             var reader = new StudentReader();
-            _studentList = reader.GetStudents(fileName);
+            _studentList = reader.GetStudents();
         }
 
         public void HandleMenuItems()

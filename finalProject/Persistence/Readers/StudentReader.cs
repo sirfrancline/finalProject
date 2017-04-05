@@ -7,7 +7,8 @@ namespace finalProject.Persistence.Readers
 {
     public class StudentReader
     {
-        public Dictionary<string, Student> GetStudents(string fileName)
+        string fileName = @"TextFiles\student.txt";
+        public Dictionary<string, Student> GetStudents()
         {
             var students = new Dictionary<string, Student>();
             lock (LockObjects.StLocker)

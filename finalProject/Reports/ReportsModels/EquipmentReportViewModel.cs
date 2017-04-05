@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace finalProject.Reports.ReportsModels
 {
-    class EquipmentReportViewModel
+    public class EquipmentReportViewModel
     {
         public Student Borrower { get; set; }
         public Staff Lender { get; set; }

@@ -8,7 +8,9 @@ namespace finalProject.Persistence.Readers
 {
     public class RentalReader
     {
-        public List<Issue> GetRentals(string fileName)
+        string fileName = @"TextFiles\rental.csv";  //move to app config
+
+        public List<Issue> GetRentals()
         {
             var rentals = new List<Issue>();
             lock (LockObjects.RentalLocker)
@@ -49,6 +51,15 @@ namespace finalProject.Persistence.Readers
 
                 return rentals;
             }
+        }
+
+        public List<Issue> GetRentalsByEquipmentId(string id)
+        {
+            var rentals = GetRentals()         // read the file
+                .Where(a=>a.EquipmentID==id)   // select only mayching lines             
+                .ToList();
+            
+            return rentals;
         }
     }
 }

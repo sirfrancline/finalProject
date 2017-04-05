@@ -44,10 +44,10 @@ namespace finalProject
         private void Initialise()
         {
             _rentalOperations = new RentalOperations(_equipmentOperations);
-            _studentOperations.Start(@"TextFiles\student.txt");
+            _studentOperations.Start();
             _equipmentOperations.Start(@"TextFiles\equipment.txt");
             _staffOperations.Start(@"TextFiles\staff.txt");
-            _rentalOperations.Start(@"TextFiles\rental.csv");
+            _rentalOperations.Start();
         }
 
       

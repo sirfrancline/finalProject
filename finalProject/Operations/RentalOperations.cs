@@ -73,10 +73,10 @@ namespace finalProject
             //}
         }
 
-        internal void Start(string fileName)
+        internal void Start()
         {
             var reader = new RentalReader();
-            _bookingList = reader.GetRentals(fileName);
+            _bookingList = reader.GetRentals();
         }
     }
 }
