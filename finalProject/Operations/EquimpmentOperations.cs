@@ -15,7 +15,7 @@ namespace finalProject
         public void Start()
         {
             var reader = new EquipmentReader();
-            _equipmentList = reader.GetEquipment();
+            _equipmentList = reader.GetAllEquipment();
         }
 
         

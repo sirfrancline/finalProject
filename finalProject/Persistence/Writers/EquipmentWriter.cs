@@ -18,14 +18,14 @@ namespace finalProject.Persistence.Writers
 
         public void Add(Equipment item)
         {
-            var list = reader.GetEquipment();
+            var list = reader.GetAllEquipment();
             list.Add(item.ID, item);
             Save(list, true);
         }
 
         public void Edit(Equipment item)
         {
-            var list = reader.GetEquipment();
+            var list = reader.GetAllEquipment();
             if (list.ContainsKey(item.ID))
             {
                 list[item.ID] = item; // replace full item in dictionary
@@ -35,7 +35,7 @@ namespace finalProject.Persistence.Writers
 
         public void Delete(Equipment item)
         {
-            var list = reader.GetEquipment();
+            var list = reader.GetAllEquipment();
             if (list.ContainsKey(item.ID))
             {
                 list.Remove(item.ID);

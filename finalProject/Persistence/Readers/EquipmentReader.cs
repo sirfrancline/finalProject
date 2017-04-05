@@ -8,7 +8,7 @@ namespace finalProject.Persistence.Readers
     public class EquipmentReader
     {
         string fileName = @"TextFiles\equipment.txt";
-        public Dictionary<string, Equipment> GetEquipment()
+        public Dictionary<string, Equipment> GetAllEquipment()
 
         {
             var equipmentList = new Dictionary<string, Equipment>();

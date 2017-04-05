@@ -10,28 +10,31 @@ namespace finalProject.Reports
 {
 public  class EquipmentReport
     {
-        /*
 
-            _studentOperations.Start();
-            _equipmentOperations.Start(@"TextFiles\equipment.txt");
-            _staffOperations.Start(@"TextFiles\staff.txt");
-            
+        StaffReader _staffReader = new StaffReader();
+       RentalReader _rentaReader = new RentalReader();
+        StudentReader _studentReader = new StudentReader();
 
-         */
-
-        RentalReader _rentaReader = new RentalReader();
 
         public List<EquipmentReportViewModel> GetEquipmentUsage(string id) {
 
-            var rentals = _rentaReader.GetRentalsByEquipmentId(id);
+            var rentals = _rentaReader.GetRentalsByEquipmentId(id);            
+            var staffMembers = _staffReader.GetStuffMembers();
+            var students = _studentReader.GetStudents();
 
-            var studentIds = rentals.Select(st => st.StudentId).Distinct().ToList();
-            var empIds = rentals.Select(st => st.EmployeeId).Distinct().ToList();
+            var list = new List<EquipmentReportViewModel>();
+            foreach (var item in rentals)
+            {
+                var lineItem = new EquipmentReportViewModel {
+                    LineEntry = item,
+                    Lender = staffMembers[item.EmployeeId],
+                    Borrower = students[item.StudentId]            
+                };
 
+                list.Add(lineItem);
+            }
 
-
-
-            return null;
+            return list;
         }
     }
 }

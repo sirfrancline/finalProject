@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btn_viewStatus = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_viewStatus
@@ -42,13 +42,7 @@
             this.btn_viewStatus.TabIndex = 11;
             this.btn_viewStatus.Text = "View status";
             this.btn_viewStatus.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 13;
+            this.btn_viewStatus.Click += new System.EventHandler(this.btn_viewStatus_Click);
             // 
             // label1
             // 
@@ -64,8 +58,15 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 66);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(147, 121);
+            this.listBox1.Size = new System.Drawing.Size(260, 186);
             this.listBox1.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.TabIndex = 13;
             // 
             // equipment_Status
             // 
@@ -78,6 +79,7 @@
             this.Controls.Add(this.btn_viewStatus);
             this.Name = "equipment_Status";
             this.Text = "equipment_Status";
+            this.Load += new System.EventHandler(this.equipment_Status_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +88,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_viewStatus;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
