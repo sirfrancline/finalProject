@@ -1,4 +1,5 @@
-﻿using System;
+﻿using finalProject.Persistence.Readers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -13,41 +14,11 @@ namespace finalProject
 
         public void Start(string fileName)
         {
-            _equipmentList = GetEquipment(fileName);
+            var reader = new EquipmentReader();
+            _equipmentList = reader.GetEquipment(fileName);
         }
 
-        private Dictionary<string, Equipment> GetEquipment(string fileName)
-
-        {
-            var equipmentList = new Dictionary<string, Equipment>();
-            if (File.Exists(fileName))
-            {
-                using (var equipmentFile = new StreamReader(fileName))
-                {
-                    while (!equipmentFile.EndOfStream)
-                    {
-                        var equipments = equipmentFile.ReadLine();
-                        var equipmentdetails = equipments.Split(',');
-                        var equipment = new Equipment
-                        {
-                            ID = equipmentdetails[0],
-                            Type = equipmentdetails[1],
-                            MaxRentalDays = int.Parse(equipmentdetails[2]),
-                            Description = equipmentdetails[3]
-                        };
-
-                        equipmentList.Add(equipment.ID, equipment);
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("files is missing....");
-                Console.ReadLine();
-            }
-
-            return equipmentList;
-        }
+        
 
         public void DeleteEquipment()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using finalProject.Persistence.Readers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace finalProject
 
         public void Start(string fileName)
         {
-            _staffList = GetStuffMembers(fileName);
+            var reader = new StaffReader();
+            _staffList = reader.GetStuffMembers(fileName);
         }
 
         public void HandleMenuItems()
@@ -156,36 +158,7 @@ namespace finalProject
         }
 
 
-        private Dictionary<string, Staff> GetStuffMembers(string fileName)
-        {
-            var staffList = new Dictionary<string, Staff>();
-            if (File.Exists(fileName))
-            {
-                using (var staffFile = new StreamReader(fileName))
-                {
-                    while (!staffFile.EndOfStream)
-                    {
-                        var staffS = staffFile.ReadLine();
-                        var staffdetails = staffS.Split(' ');
-                        var staff = new Staff();
-                        staff.IdNumber = staffdetails[0];
-                        staff.FirstName = staffdetails[1];
-                        staff.Surname = staffdetails[2];
-                        staff.Username = staffdetails[3];
-                        staff.Password = staffdetails[4];
-                        staffList.Add(staff.IdNumber, staff);
-                    }
-                }
-            }
-            else
-            {
-                // missing file,
-                Console.WriteLine("files is missing....");
-                Console.ReadLine();
-            }
-            return staffList;
-        }
-
+        
 
         private static void DisplayStaffMaintanenceMenu()
         {
@@ -230,27 +203,27 @@ namespace finalProject
             Console.Write("Enter  firstname: ");
             var firstName = Console.ReadLine();
 
-            throw new NotImplementedException();
+ 
         }
         private void Surname(string idGotFromUser)
         {
             Console.Write("Enter  Surname: ");
             var surName = Console.ReadLine();
 
-            throw new NotImplementedException();
+ 
         }
         private void Username(string idGotFromUser)
         {
             Console.Write("Enter  new username: ");
             var userName = Console.ReadLine();
 
-            throw new NotImplementedException();
+ 
         }
         private void Password(string idGotFromUser)
         {
             Console.Write("Enter  new password: ");
             var newPassword = Console.ReadLine();
-           throw new NotImplementedException();
+ 
         }
     }
 }

@@ -53,6 +53,10 @@
     <Compile Include="Helpers.cs" />
     <Compile Include="LoginHelper.cs" />
     <Compile Include="MainProjectOptionEnum.cs" />
+    <Compile Include="Persistence\FileSingleAccessControlObjects\LockObjects.cs" />
+    <Compile Include="Persistence\Readers\EquipmentReader.cs" />
+    <Compile Include="Persistence\Readers\StaffReader.cs" />
+    <Compile Include="Persistence\Readers\StudentReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="classes\Staff.cs" />
@@ -79,6 +83,9 @@
     <Content Include="TextFiles\staff.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\Writers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

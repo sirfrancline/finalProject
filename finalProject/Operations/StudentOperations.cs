@@ -1,19 +1,17 @@
-﻿using System;
+﻿using finalProject.Persistence.Readers;
+using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace finalProject
 {
-public    class StudentOperations
+    public class StudentOperations
     {
-        Dictionary<string, Student> _studentList;
+        private Dictionary<string, Student> _studentList;
 
         public void Start(string fileName)
         {
-            _studentList = GetStudents(fileName);
+            var reader = new StudentReader();
+            _studentList = reader.GetStudents(fileName);
         }
 
         public void HandleMenuItems()
@@ -35,7 +33,6 @@ public    class StudentOperations
                     }
                     break;
 
-
                 case 2:
 
                     break;
@@ -44,39 +41,6 @@ public    class StudentOperations
                     //exit
                     break;
             }
-        }
-
-        private Dictionary <string, Student> GetStudents(string fileName)
-        {
-            var students = new Dictionary<string, Student>();
-            if (File.Exists(fileName))
-            {
-                using (var studentFile = new StreamReader(fileName))
-                {
-                    while (!studentFile.EndOfStream)
-                    {
-                        var line = studentFile.ReadLine();
-                        var studentdetails = line.Split(' ');
-                        var student = new Student
-                        {
-                            IdNumber = studentdetails[0],
-                            FirstName = studentdetails[1],
-                            Surname = studentdetails[2],
-                            Course = studentdetails[3]
-                        };
-
-                        students.Add(student.IdNumber, student);
-                    }
-                }
-            }
-            else
-            {
-                // we can log error here displap mesage
-                Console.WriteLine("files is missing....");
-                Console.ReadLine();
-            }
-
-            return students;
         }
     }
 }
