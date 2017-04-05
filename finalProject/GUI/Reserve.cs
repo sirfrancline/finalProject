@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace finalProject.classes
 {
-    public partial class viewAddDeleteUpdateEquipment : Form
+    public partial class Reserve : Form
     {
-        public viewAddDeleteUpdateEquipment()
+        public Reserve()
         {
             InitializeComponent();
         }

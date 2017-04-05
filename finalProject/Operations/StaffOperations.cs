@@ -58,24 +58,38 @@ namespace finalProject
             Console.Write("Enter Staff Username : ");
             var usernamestaff = Console.ReadLine();
 
+            bool test = false;
 
-            // hide emntering passsword by using login helper
-            Console.Write("Enter Staff Password : ");
-            var passwordstaff = LoginHelper.GetPassword();
-            Console.Write(" Confirm Staff Password : ");
-            var passwordstaffConfirmation = LoginHelper.GetPassword();
+                while (test!=true)
 
-            if (passwordstaff == passwordstaffConfirmation)
-            {
-                var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
-                _staffList.Add(staffmember.IdNumber, staffmember);
-                staffmember.Display();
-
-            }
-            else
             {
 
-                Console.WriteLine("password doesn't match");
+                // hide emntering passsword by using login helper
+                Console.Write("Enter Staff Password : ");
+                var passwordstaff = LoginHelper.GetPassword();
+                Console.Write(" Confirm Staff Password : ");
+                var passwordstaffConfirmation = LoginHelper.GetPassword();
+
+                if (passwordstaff == passwordstaffConfirmation)
+                {
+                    var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
+                    _staffList.Add(staffmember.IdNumber, staffmember);
+                    staffmember.Display();
+                    test = true;
+                    Console.WriteLine("new Staff Member Added");
+                    Console.Read();
+
+                }
+                else
+                {
+
+                    Console.WriteLine("password doesn't match");
+                    Console.Read();
+                    Console.Clear();
+
+                }
+
+
 
 
             }
