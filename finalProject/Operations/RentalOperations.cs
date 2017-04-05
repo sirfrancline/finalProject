@@ -7,7 +7,7 @@ namespace finalProject
 {
     public class RentalOperations
     {
-        private List<Booking> _bookingList;
+        private List<Issue> _bookingList;
         private EquimpmentOperations _equipmentOperations;
 
         public RentalOperations(EquimpmentOperations equipmentOperations)

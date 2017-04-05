@@ -2,22 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace finalProject.Persistence.Readers
+namespace finalProject.Persistence.Writers
 {
-    namespace finalProject.Persistence.Writers
+    public class RentalWriter
     {
-
-
-        public List<Booking> GetRentals(string fileName)
+        public List<Issue> GetRentals(string fileName)
         {
-            var rentals = new List<Booking>();
+            var rentals = new List<Issue>();
             lock (LockObjects.RentalLocker)
             {
-
                 if (File.Exists(fileName))
                 {
                     using (var rentalFile = new StreamReader(fileName))
@@ -26,7 +20,7 @@ namespace finalProject.Persistence.Readers
                         {
                             var line = rentalFile.ReadLine();
                             var rental = line.Split(',');
-                            var booking = new Booking
+                            var booking = new Issue
                             {
                                 EmployeeId = rental[0],
                                 EquipmentID = rental[1],

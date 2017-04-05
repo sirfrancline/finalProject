@@ -69,6 +69,8 @@
     <Compile Include="Operations\RentalOperations.cs" />
     <Compile Include="classes\Student.cs" />
     <Compile Include="Operations\StudentOperations.cs" />
+    <Compile Include="Reports\EquipmentReport.cs" />
+    <Compile Include="Reports\ReportsModels\EquipmentReportViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
