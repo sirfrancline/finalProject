@@ -17,36 +17,49 @@ namespace finalProject
 
         public void HandleMenuItems()
         {
-            int optionStaff;
-            DisplayStaffMaintanenceMenu();
-            optionStaff = Convert.ToInt32(Console.ReadLine());
-
-            switch (optionStaff)
+            var stayInTheMenu = true;
+            while (stayInTheMenu)
             {
-                case 1:
-                    Console.WriteLine("******Staff List*******");
-                    foreach (var staff in _staffList)
-                        staff.Value.Display();
-                    break;
+                int optionStaff;
+                DisplayStaffMaintanenceMenu();
+                optionStaff = Convert.ToInt32(Console.ReadLine());
 
-                case 2:
-                    AddStaff();
-                    break;
+                switch (optionStaff)
+                {
+                    case 1:
+                        Console.WriteLine("******Staff List*******");
+                        foreach (var staff in _staffList)
+                        {
+                            staff.Value.Display();
+                        }
 
-                case 3:
-                    DeleteStaff();
-                    break;
+                        Console.WriteLine("Fil;hed (enter to continue)");
+                        Console.ReadLine();
 
-                case 4:
-                    UpdateStaff();
-                    break;
 
-                case 5:
-                    //exit
-                    break;
+
+                        break;
+
+                    case 2:
+                        AddStaff();
+                        break;
+
+                    case 3:
+                        DeleteStaff();
+                        break;
+
+                    case 4:
+                        UpdateStaff();
+                        break;
+
+                    case 5:
+                        //exit
+                        stayInTheMenu = false;
+                        break;
+                        
+                }
             }
-        }
-
+           }
         void AddStaff()
         {
             Console.Write("Enter First Name : ");
