@@ -58,6 +58,10 @@
     <Compile Include="Persistence\Readers\RentalReader.cs" />
     <Compile Include="Persistence\Readers\StaffReader.cs" />
     <Compile Include="Persistence\Readers\StudentReader.cs" />
+    <Compile Include="Persistence\Writers\EquipmentWriter.cs" />
+    <Compile Include="Persistence\Writers\RentalReader.cs" />
+    <Compile Include="Persistence\Writers\StaffReader.cs" />
+    <Compile Include="Persistence\Writers\StudentReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="classes\Staff.cs" />
@@ -85,9 +89,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistence\Writers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
