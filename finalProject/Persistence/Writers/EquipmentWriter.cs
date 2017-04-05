@@ -8,28 +8,24 @@ namespace finalProject.Persistence.Writers
     public class EquipmentWriter
     {
         private EquipmentReader reader = new EquipmentReader();
+        
+        string _fileName = @"TextFiles\equipment.txt";
 
-        private string _fileName;
-
-        /// <summary>
-        /// CONSTRUCTOR
-        /// </summary>
-        /// <param name="fileName"></param>
-        public EquipmentWriter(string fileName)
+        public EquipmentWriter()
         {
-            _fileName = fileName;
+            
         }
 
         public void Add(Equipment item)
         {
-            var list = reader.GetEquipment(_fileName);
+            var list = reader.GetEquipment();
             list.Add(item.ID, item);
             Save(list, true);
         }
 
         public void Edit(Equipment item)
         {
-            var list = reader.GetEquipment(_fileName);
+            var list = reader.GetEquipment();
             if (list.ContainsKey(item.ID))
             {
                 list[item.ID] = item; // replace full item in dictionary
@@ -39,7 +35,7 @@ namespace finalProject.Persistence.Writers
 
         public void Delete(Equipment item)
         {
-            var list = reader.GetEquipment(_fileName);
+            var list = reader.GetEquipment();
             if (list.ContainsKey(item.ID))
             {
                 list.Remove(item.ID);

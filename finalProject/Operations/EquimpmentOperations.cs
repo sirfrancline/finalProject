@@ -12,10 +12,10 @@ namespace finalProject
         public Dictionary<string, Equipment> EquipmentList { get { return _equipmentList; } }
         private string _prompt;
 
-        public void Start(string fileName)
+        public void Start()
         {
             var reader = new EquipmentReader();
-            _equipmentList = reader.GetEquipment(fileName);
+            _equipmentList = reader.GetEquipment();
         }
 
         

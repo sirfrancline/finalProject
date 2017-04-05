@@ -10,8 +10,9 @@ namespace finalProject.Persistence.Readers
 {
     public class StaffReader
     {
+        string fileName=@"TextFiles\staff.txt";
 
-        public Dictionary<string, Staff> GetStuffMembers(string fileName)
+        public Dictionary<string, Staff> GetStuffMembers()
         {
             var staffList = new Dictionary<string, Staff>();
             lock (LockObjects.StaffLocker)

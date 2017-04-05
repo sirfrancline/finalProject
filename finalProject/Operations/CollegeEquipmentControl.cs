@@ -45,8 +45,8 @@ namespace finalProject
         {
             _rentalOperations = new RentalOperations(_equipmentOperations);
             _studentOperations.Start();
-            _equipmentOperations.Start(@"TextFiles\equipment.txt");
-            _staffOperations.Start(@"TextFiles\staff.txt");
+            _equipmentOperations.Start();
+            _staffOperations.Start();
             _rentalOperations.Start();
         }
 

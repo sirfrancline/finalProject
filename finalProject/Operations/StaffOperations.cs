@@ -11,10 +11,10 @@ namespace finalProject
       private Dictionary<string, Staff> _staffList;
         private string _prompt;
 
-        public void Start(string fileName)
+        public void Start()
         {
             var reader = new StaffReader();
-            _staffList = reader.GetStuffMembers(fileName);
+            _staffList = reader.GetStuffMembers();
         }
 
         public void HandleMenuItems()
