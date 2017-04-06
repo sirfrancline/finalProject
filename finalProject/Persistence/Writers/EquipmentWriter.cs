@@ -16,14 +16,14 @@ namespace finalProject.Persistence.Writers
             
         }
 
-        public void Add(student item)
+        public void Add(Equimpment item)
         {
             var list = reader.GetAllEquipment();
             list.Add(item.ID, item);
             Save(list, true);
         }
 
-        public void Edit(student item)
+        public void Edit(Equimpment item)
         {
             var list = reader.GetAllEquipment();
             if (list.ContainsKey(item.ID))
@@ -33,7 +33,7 @@ namespace finalProject.Persistence.Writers
             }
         }
 
-        public void Delete(student item)
+        public void Delete(Equimpment item)
         {
             var list = reader.GetAllEquipment();
             if (list.ContainsKey(item.ID))
@@ -43,7 +43,7 @@ namespace finalProject.Persistence.Writers
             }
         }
 
-        private void Save(Dictionary<string, student> list, bool isAppend = false)
+        private void Save(Dictionary<string, Equimpment> list, bool isAppend = false)
         {
             lock (LockObjects.EqLocker)
             {

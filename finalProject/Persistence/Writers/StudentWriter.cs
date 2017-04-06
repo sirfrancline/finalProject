@@ -13,7 +13,7 @@ namespace finalProject.Persistence.Writers
 
         private StudentReader reader = new StudentReader();
 
-        string _fileName = @"TextFiles\student.txt";
+        string _fileName = @"TextFiles\Equimpment.txt";
 
         public StudentWriter()
         {
@@ -22,7 +22,7 @@ namespace finalProject.Persistence.Writers
 
         
 
-        private void save(Dictionary<string, student> list, bool isAppend = false)
+        private void save(Dictionary<string, Equimpment> list, bool isAppend = false)
         {
             lock (LockObjects.EqLocker)
             {

@@ -8,10 +8,10 @@ namespace finalProject.Persistence.Readers
     public class EquipmentReader
     {
         string fileName = @"TextFiles\equipment.txt";
-        public Dictionary<string, student> GetAllEquipment()
+        public Dictionary<string, Equimpment> GetAllEquipment()
 
         {
-            var equipmentList = new Dictionary<string, student>();
+            var equipmentList = new Dictionary<string, Equimpment>();
 
             lock (LockObjects.EqLocker)
             {
@@ -23,7 +23,7 @@ namespace finalProject.Persistence.Readers
                         {
                             var equipments = equipmentFile.ReadLine();
                             var equipmentdetails = equipments.Split(',');
-                            var equipment = new student
+                            var equipment = new Equimpment
                             {
                                 ID = equipmentdetails[0],
                                 Type = equipmentdetails[1],
