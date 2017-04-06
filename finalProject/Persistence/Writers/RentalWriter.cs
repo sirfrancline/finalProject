@@ -11,13 +11,12 @@ namespace finalProject.Persistence.Writers
 
     {
 
-        private RentalReader reader  = new RentalReader();
+        private RentalReader _reader  = new RentalReader();
 
         string _fileName = @"TextFiles\rental.txt";
 
-        public RentalWriter()
-        {
-
+        public void Add(Issue issue) {
+            var list = _reader.GetAllRentals();
         }
     }
 }

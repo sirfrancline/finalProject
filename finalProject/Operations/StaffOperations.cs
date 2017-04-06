@@ -14,7 +14,7 @@ namespace finalProject
         public void Start()
         {
             var reader = new StaffReader();
-            _staffList = reader.GetStuffMembers();
+            _staffList = reader.GetAllStuffMembers();
         }
 
         public void HandleMenuItems()

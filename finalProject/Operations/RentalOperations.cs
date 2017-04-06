@@ -76,7 +76,7 @@ namespace finalProject
         internal void Start()
         {
             var reader = new RentalReader();
-            _bookingList = reader.GetRentals();
+            _bookingList = reader.GetAllRentals();
         }
     }
 }

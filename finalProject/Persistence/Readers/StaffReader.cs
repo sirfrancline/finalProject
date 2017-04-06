@@ -12,7 +12,7 @@ namespace finalProject.Persistence.Readers
     {
         string fileName=@"TextFiles\staff.txt";
 
-        public Dictionary<string, Staff> GetStuffMembers()
+        public Dictionary<string, Staff> GetAllStuffMembers()
         {
             var staffList = new Dictionary<string, Staff>();
             lock (LockObjects.StaffLocker)
@@ -47,7 +47,7 @@ namespace finalProject.Persistence.Readers
 
         internal Dictionary<string, Staff> GetStuffMembersByIds(List<string> empIds)
         {
-            var stuff = GetStuffMembers()                // all records from file
+            var stuff = GetAllStuffMembers()                // all records from file
                 .Where(a => empIds.Contains(a.Key))      // filter only these that we need
                 .ToDictionary(a=>a.Key, a=>a.Value);     //  convert result to dictionary
 

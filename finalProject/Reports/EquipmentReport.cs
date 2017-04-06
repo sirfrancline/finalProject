@@ -19,7 +19,7 @@ public  class EquipmentReport
         public List<EquipmentReportViewModel> GetEquipmentUsage(string id) {
 
             var rentals = _rentaReader.GetRentalsByEquipmentId(id);            
-            var staffMembers = _staffReader.GetStuffMembers();
+            var staffMembers = _staffReader.GetAllStuffMembers();
             var students = _studentReader.GetStudents();
 
             var list = new List<EquipmentReportViewModel>();
