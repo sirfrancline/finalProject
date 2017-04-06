@@ -11,7 +11,7 @@ namespace finalProject
         public void Start()
         {
             var reader = new StudentReader();
-            _studentList = reader.GetStudents();
+            _studentList = reader.GetAllStudents();
         }
 
         public void HandleMenuItems()

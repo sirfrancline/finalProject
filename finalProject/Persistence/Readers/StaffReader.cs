@@ -3,14 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace finalProject.Persistence.Readers
 {
     public class StaffReader
     {
-        string fileName=@"TextFiles\staff.txt";
+        private string fileName = @"TextFiles\staff.txt";
 
         public Dictionary<string, Staff> GetAllStuffMembers()
         {
@@ -24,6 +22,11 @@ namespace finalProject.Persistence.Readers
                         while (!staffFile.EndOfStream)
                         {
                             var staffS = staffFile.ReadLine();
+                            if (string.IsNullOrEmpty(staffS))
+                            {
+                                continue; // just read next line dont throw exceprion
+                            }
+
                             var staffdetails = staffS.Split(' ');
                             var staff = new Staff();
                             staff.IdNumber = staffdetails[0];
@@ -49,7 +52,7 @@ namespace finalProject.Persistence.Readers
         {
             var stuff = GetAllStuffMembers()                // all records from file
                 .Where(a => empIds.Contains(a.Key))      // filter only these that we need
-                .ToDictionary(a=>a.Key, a=>a.Value);     //  convert result to dictionary
+                .ToDictionary(a => a.Key, a => a.Value);     //  convert result to dictionary
 
             return stuff;
         }

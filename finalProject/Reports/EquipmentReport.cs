@@ -20,7 +20,7 @@ public  class EquipmentReport
 
             var rentals = _rentaReader.GetRentalsByEquipmentId(id);            
             var staffMembers = _staffReader.GetAllStuffMembers();
-            var students = _studentReader.GetStudents();
+            var students = _studentReader.GetAllStudents();
 
             var list = new List<EquipmentReportViewModel>();
             foreach (var item in rentals)

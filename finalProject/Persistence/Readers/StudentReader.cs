@@ -8,7 +8,7 @@ namespace finalProject.Persistence.Readers
     public class StudentReader
     {
         string fileName = @"TextFiles\student.txt";
-        public Dictionary<string, Student> GetStudents()
+        public Dictionary<string, Student> GetAllStudents()
         {
             var students = new Dictionary<string, Student>();
             lock (LockObjects.StLocker)
@@ -20,6 +20,12 @@ namespace finalProject.Persistence.Readers
                         while (!studentFile.EndOfStream)
                         {
                             var line = studentFile.ReadLine();
+
+                            if (string.IsNullOrEmpty(line))
+                            {
+                                continue; // just read next line dont throw exceprion
+                            }
+
                             var studentdetails = line.Split(' ');
                             var student = new Student
                             {
@@ -43,5 +49,6 @@ namespace finalProject.Persistence.Readers
                 return students;
             }
         }
+        
     }
 }

@@ -31,8 +31,7 @@ namespace finalProject.Persistence.Writers
                 {
                     foreach (var item in list)
                     {
-                        var line = $"{item.RentalId},{item.EmployeeId},{item.EquipmentID},{item.IsReturned},{item.IssueDate},{item.ReturnDate } {item.StudentId},{item.ReturnedDate}";
-
+                        var line = $"{item.Value.IdNumber} {item.Value.FirstName} {item.Value.Surname} {item.Value.Username} {item.Value.Password}";
                         file.WriteLine(line);
                     }
                 }
@@ -42,13 +41,15 @@ namespace finalProject.Persistence.Writers
         public void Edit(Staff item)
         {
             var list = _reader.GetAllStuffMembers();
-
+            list[item.IdNumber] = item;
+            Save(list);
         }
 
         public void Delete(Staff item)
         {
             var list = _reader.GetAllStuffMembers();
-
+            list.Remove(item.IdNumber);
+            Save(list);
         }
 
     }
