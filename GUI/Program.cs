@@ -1,4 +1,5 @@
 ﻿using finalProject.classes;
+using finalProject.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             ///
 
-            Application.Run(new equipment_Status());
+            Application.Run(new AddStaff());
             //Application.Run(new Login());
         }
     }
