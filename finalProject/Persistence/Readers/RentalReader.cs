@@ -28,13 +28,14 @@ namespace finalProject.Persistence.Readers
                             {
                                 var booking = new Issue
                                 {
-                                    EmployeeId = rental[0],
-                                    EquipmentID = rental[1],
-                                    IsReturned = rental[2] == "true",
-                                    IssueDate = DateTime.Parse(rental[3]),
-                                    ReturnDate = DateTime.Parse(rental[4]),
-                                    StudentId = rental[5],
-                                    ReturnedDate = DateTime.Parse(rental[6]),
+                                    RentalId = rental[0],
+                                    EmployeeId = rental[1],
+                                    EquipmentID = rental[2],
+                                    IsReturned = rental[3] == "true",
+                                    IssueDate = DateTime.Parse(rental[4]),
+                                    ReturnDate = DateTime.Parse(rental[5]),
+                                    StudentId = rental[6],
+                                    ReturnedDate = DateTime.Parse(rental[7]),
                                 };
 
                                 rentals.Add(booking);

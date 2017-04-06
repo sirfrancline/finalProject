@@ -12,5 +12,6 @@ namespace finalProject
         public DateTime ReturnDate { get; set; }
         public bool IsReturned { get; set; }
         public DateTime ReturnedDate { get; set; }
+        public string RentalId { get; internal set; }
     }
 }

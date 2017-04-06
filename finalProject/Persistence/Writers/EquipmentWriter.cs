@@ -11,10 +11,6 @@ namespace finalProject.Persistence.Writers
         
         string _fileName = @"TextFiles\equipment.txt";
 
-        public EquipmentWriter()
-        {
-            
-        }
 
         public void Add(Equimpment item)
         {
