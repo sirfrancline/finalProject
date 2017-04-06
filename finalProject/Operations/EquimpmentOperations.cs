@@ -7,9 +7,9 @@ namespace finalProject
 {
     public class EquimpmentOperations
     {
-        private Dictionary<string, Equipment> _equipmentList;
+        private Dictionary<string, student> _equipmentList;
 
-        public Dictionary<string, Equipment> EquipmentList { get { return _equipmentList; } }
+        public Dictionary<string, student> EquipmentList { get { return _equipmentList; } }
         private string _prompt;
 
         public void Start()
@@ -59,7 +59,7 @@ namespace finalProject
             Console.Write("Enter Description: ");
             var descritpion = Console.ReadLine();
 
-            var newequipment = new Equipment
+            var newequipment = new student
             {
                 Description = descritpion,
                 ID = id,

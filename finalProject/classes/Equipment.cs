@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace finalProject
 {
-  public  class Equipment
+  public  class student
     {
         public string ID { get; set; }
         public string Type { get; set; }
@@ -16,7 +16,7 @@ namespace finalProject
       
     }
 
-    public class EquimpmentDisplay : Equipment {
+    public class EquimpmentDisplay : student {
 
         public string Display { get { return $"id: {ID}"; } }
     }
