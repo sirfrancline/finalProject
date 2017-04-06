@@ -1,4 +1,5 @@
 ﻿using finalProject.Persistence.Readers;
+using finalProject.Persistence.Writers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,6 +11,7 @@ namespace finalProject
     {
       private Dictionary<string, Staff> _staffList;
         private string _prompt;
+        StaffWriter _writer = new StaffWriter();
 
         public void Start()
         {
@@ -24,7 +26,7 @@ namespace finalProject
             {
                 int optionStaff;
                 DisplayStaffMaintanenceMenu();
-                optionStaff = Convert.ToInt32(Console.ReadLine());
+                optionStaff = Helpers.GetIntegerOptionFromUser(1, 5);
 
                 switch (optionStaff)
                 {
@@ -89,6 +91,8 @@ namespace finalProject
                 {
                     var staffmember = new Staff(id, fname, surname, usernamestaff, passwordstaff);
                     _staffList.Add(staffmember.IdNumber, staffmember);
+                    
+                    _writer.Add(staffmember);
                     staffmember.Display();
                     test = true;
                     Console.WriteLine("new Staff Member Added");
@@ -122,6 +126,7 @@ namespace finalProject
             if (_staffList.ContainsKey(id))
             {
                 _staffList.Remove(id);
+                
                 Console.WriteLine("Removed");
                 // save that to flat file
             }

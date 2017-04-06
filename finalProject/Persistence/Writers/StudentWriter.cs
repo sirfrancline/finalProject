@@ -32,7 +32,7 @@ namespace finalProject.Persistence.Writers
             Save(list);
         }
 
-                private void Save(Dictionary<string, Student> list, bool isAppend = false)
+        private void Save(Dictionary<string, Student> list, bool isAppend = false)
         {
             lock (LockObjects.StLocker)
             {
