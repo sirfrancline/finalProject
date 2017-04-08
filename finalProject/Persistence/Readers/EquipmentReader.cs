@@ -37,7 +37,7 @@ namespace finalProject.Persistence.Readers
                 }
                 else
                 {
-                    Console.WriteLine("files is missing....");
+                    Console.WriteLine("Equimpment file is missing....");
                     Console.ReadLine();
                 }
 

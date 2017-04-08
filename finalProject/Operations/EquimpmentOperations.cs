@@ -1,4 +1,5 @@
 ﻿using finalProject.Persistence.Readers;
+using finalProject.Reports;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -82,8 +83,11 @@ namespace finalProject
                     Console.WriteLine("******Equipment List*******");
                     foreach (var e in _equipmentList)
                     {
-                        //  e.Display();
+                        Console.WriteLine($"{e.Value.ID} {e.Value.Type} {e.Value.MaxRentalDays} {e.Value.Description}");
                     }
+
+                    Console.WriteLine("(enter)");
+                    Console.ReadLine();
                     break;
 
                 case 2:
@@ -99,13 +103,49 @@ namespace finalProject
                     break;
 
                 case 5:
-
+                    EquipmentReport();
                     break;
 
                 case 6:
                     //exit
                     break;
             }
+        }
+
+        private void EquipmentReport()
+        {
+            Console.WriteLine("Provide equpment id:");
+            var id = Console.ReadLine();
+            if (_equipmentList.ContainsKey(id))
+            {
+                DisplayReport(id);
+
+            }
+            else {
+                Console.WriteLine("Please check id...");
+                
+            }
+
+            Console.WriteLine("(enter)");
+            Console.ReadLine();
+        }
+
+        private void DisplayReport(string id)
+        {
+            var reportGenerator = new EquipmentReport();
+            var report = reportGenerator.GetEquipmentUsage(id);
+
+            foreach (var item in report)
+            {
+                Console.WriteLine("*******");
+                Console.WriteLine($"{item.Borrower.FirstName} {item.Borrower.Surname} {item.Borrower.Course}");
+                Console.WriteLine($"{item.Lender.FirstName} {item.Lender.Surname}");
+                Console.WriteLine($"{item.LineEntry.IsReturned} {item.LineEntry.IssueDate} {item.LineEntry.ReturnDate} {item.LineEntry.ReturnedDate}" );
+                Console.WriteLine("*******");
+                Console.WriteLine("");
+            }
+
+
         }
 
         private void UpdateEquipment()
@@ -135,7 +175,7 @@ namespace finalProject
             Console.Write("Enter Description: ");
             var descritpion = Console.ReadLine();
 
-            throw new NotImplementedException();
+            
         }
 
         private void UpdateRental(string idGotFromUser)
@@ -143,7 +183,7 @@ namespace finalProject
             Console.Write("Enter Max Rental Days : ");
             var reantal = Helpers.GetIntegerOptionFromUser(1, 10);
 
-            throw new NotImplementedException();
+
         }
 
         private void UpdateType(string idGotFromUser)

@@ -12,7 +12,7 @@ public  class EquipmentReport
     {
 
         StaffReader _staffReader = new StaffReader();
-       RentalReader _rentaReader = new RentalReader();
+        RentalReader _rentaReader = new RentalReader();
         StudentReader _studentReader = new StudentReader();
 
 
