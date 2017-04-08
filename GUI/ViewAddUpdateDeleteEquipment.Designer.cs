@@ -28,80 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_UpdateE = new System.Windows.Forms.Button();
-            this.btn_DeleteE = new System.Windows.Forms.Button();
-            this.btn_AddE = new System.Windows.Forms.Button();
-            this.btn_ViewE = new System.Windows.Forms.Button();
-            this.textBox_EID = new System.Windows.Forms.TextBox();
-            this.btn_searchEID = new System.Windows.Forms.Button();
-            this.listBox_Equipment = new System.Windows.Forms.ListBox();
+            this.updateEqBtn = new System.Windows.Forms.Button();
+            this.deleteEqBtn = new System.Windows.Forms.Button();
+            this.addEqBtn = new System.Windows.Forms.Button();
+            this.viewEqBtn = new System.Windows.Forms.Button();
+            this.searchEqIDtxtbox = new System.Windows.Forms.TextBox();
+            this.searchEqBtn = new System.Windows.Forms.Button();
+            this.displayEquipment = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_UpdateE
+            // updateEqBtn
             // 
-            this.btn_UpdateE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UpdateE.Location = new System.Drawing.Point(220, 188);
-            this.btn_UpdateE.Name = "btn_UpdateE";
-            this.btn_UpdateE.Size = new System.Drawing.Size(112, 23);
-            this.btn_UpdateE.TabIndex = 31;
-            this.btn_UpdateE.Text = "Update";
-            this.btn_UpdateE.UseVisualStyleBackColor = true;
+            this.updateEqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateEqBtn.Location = new System.Drawing.Point(317, 199);
+            this.updateEqBtn.Name = "updateEqBtn";
+            this.updateEqBtn.Size = new System.Drawing.Size(88, 23);
+            this.updateEqBtn.TabIndex = 31;
+            this.updateEqBtn.Text = "Update";
+            this.updateEqBtn.UseVisualStyleBackColor = true;
             // 
-            // btn_DeleteE
+            // deleteEqBtn
             // 
-            this.btn_DeleteE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteE.Location = new System.Drawing.Point(220, 159);
-            this.btn_DeleteE.Name = "btn_DeleteE";
-            this.btn_DeleteE.Size = new System.Drawing.Size(112, 23);
-            this.btn_DeleteE.TabIndex = 30;
-            this.btn_DeleteE.Text = "Delete";
-            this.btn_DeleteE.UseVisualStyleBackColor = true;
+            this.deleteEqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteEqBtn.Location = new System.Drawing.Point(317, 155);
+            this.deleteEqBtn.Name = "deleteEqBtn";
+            this.deleteEqBtn.Size = new System.Drawing.Size(88, 23);
+            this.deleteEqBtn.TabIndex = 30;
+            this.deleteEqBtn.Text = "Delete";
+            this.deleteEqBtn.UseVisualStyleBackColor = true;
             // 
-            // btn_AddE
+            // addEqBtn
             // 
-            this.btn_AddE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddE.Location = new System.Drawing.Point(220, 130);
-            this.btn_AddE.Name = "btn_AddE";
-            this.btn_AddE.Size = new System.Drawing.Size(112, 23);
-            this.btn_AddE.TabIndex = 29;
-            this.btn_AddE.Text = "Add";
-            this.btn_AddE.UseVisualStyleBackColor = true;
+            this.addEqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEqBtn.Location = new System.Drawing.Point(317, 113);
+            this.addEqBtn.Name = "addEqBtn";
+            this.addEqBtn.Size = new System.Drawing.Size(88, 23);
+            this.addEqBtn.TabIndex = 29;
+            this.addEqBtn.Text = "Add";
+            this.addEqBtn.UseVisualStyleBackColor = true;
             // 
-            // btn_ViewE
+            // viewEqBtn
             // 
-            this.btn_ViewE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewE.Location = new System.Drawing.Point(220, 87);
-            this.btn_ViewE.Name = "btn_ViewE";
-            this.btn_ViewE.Size = new System.Drawing.Size(112, 23);
-            this.btn_ViewE.TabIndex = 28;
-            this.btn_ViewE.Text = "View";
-            this.btn_ViewE.UseVisualStyleBackColor = true;
+            this.viewEqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewEqBtn.Location = new System.Drawing.Point(317, 75);
+            this.viewEqBtn.Name = "viewEqBtn";
+            this.viewEqBtn.Size = new System.Drawing.Size(88, 23);
+            this.viewEqBtn.TabIndex = 28;
+            this.viewEqBtn.Text = "View";
+            this.viewEqBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox_EID
+            // searchEqIDtxtbox
             // 
-            this.textBox_EID.Location = new System.Drawing.Point(12, 47);
-            this.textBox_EID.Name = "textBox_EID";
-            this.textBox_EID.Size = new System.Drawing.Size(202, 20);
-            this.textBox_EID.TabIndex = 27;
+            this.searchEqIDtxtbox.Location = new System.Drawing.Point(12, 32);
+            this.searchEqIDtxtbox.Name = "searchEqIDtxtbox";
+            this.searchEqIDtxtbox.Size = new System.Drawing.Size(194, 20);
+            this.searchEqIDtxtbox.TabIndex = 27;
             // 
-            // btn_searchEID
+            // searchEqBtn
             // 
-            this.btn_searchEID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_searchEID.Location = new System.Drawing.Point(220, 47);
-            this.btn_searchEID.Name = "btn_searchEID";
-            this.btn_searchEID.Size = new System.Drawing.Size(112, 23);
-            this.btn_searchEID.TabIndex = 26;
-            this.btn_searchEID.Text = "Search";
-            this.btn_searchEID.UseVisualStyleBackColor = true;
+            this.searchEqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchEqBtn.Location = new System.Drawing.Point(220, 32);
+            this.searchEqBtn.Name = "searchEqBtn";
+            this.searchEqBtn.Size = new System.Drawing.Size(67, 23);
+            this.searchEqBtn.TabIndex = 26;
+            this.searchEqBtn.Text = "Search";
+            this.searchEqBtn.UseVisualStyleBackColor = true;
             // 
-            // listBox_Equipment
+            // displayEquipment
             // 
-            this.listBox_Equipment.FormattingEnabled = true;
-            this.listBox_Equipment.Location = new System.Drawing.Point(12, 75);
-            this.listBox_Equipment.Name = "listBox_Equipment";
-            this.listBox_Equipment.Size = new System.Drawing.Size(202, 134);
-            this.listBox_Equipment.TabIndex = 25;
+            this.displayEquipment.FormattingEnabled = true;
+            this.displayEquipment.Location = new System.Drawing.Point(12, 75);
+            this.displayEquipment.Name = "displayEquipment";
+            this.displayEquipment.Size = new System.Drawing.Size(275, 147);
+            this.displayEquipment.TabIndex = 25;
             // 
             // label1
             // 
@@ -117,17 +117,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 261);
-            this.Controls.Add(this.btn_UpdateE);
-            this.Controls.Add(this.btn_DeleteE);
-            this.Controls.Add(this.btn_AddE);
-            this.Controls.Add(this.btn_ViewE);
-            this.Controls.Add(this.textBox_EID);
-            this.Controls.Add(this.btn_searchEID);
-            this.Controls.Add(this.listBox_Equipment);
+            this.ClientSize = new System.Drawing.Size(417, 261);
+            this.Controls.Add(this.updateEqBtn);
+            this.Controls.Add(this.deleteEqBtn);
+            this.Controls.Add(this.addEqBtn);
+            this.Controls.Add(this.viewEqBtn);
+            this.Controls.Add(this.searchEqIDtxtbox);
+            this.Controls.Add(this.searchEqBtn);
+            this.Controls.Add(this.displayEquipment);
             this.Controls.Add(this.label1);
             this.Name = "ViewAddUpdateDeleteEquipment";
-            this.Text = "ViewAddUpdateDeleteEquipment";
+            this.Text = "View Add Update Delete Equipment";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,13 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_UpdateE;
-        private System.Windows.Forms.Button btn_DeleteE;
-        private System.Windows.Forms.Button btn_AddE;
-        private System.Windows.Forms.Button btn_ViewE;
-        private System.Windows.Forms.TextBox textBox_EID;
-        private System.Windows.Forms.Button btn_searchEID;
-        private System.Windows.Forms.ListBox listBox_Equipment;
+        private System.Windows.Forms.Button updateEqBtn;
+        private System.Windows.Forms.Button deleteEqBtn;
+        private System.Windows.Forms.Button addEqBtn;
+        private System.Windows.Forms.Button viewEqBtn;
+        private System.Windows.Forms.TextBox searchEqIDtxtbox;
+        private System.Windows.Forms.Button searchEqBtn;
+        private System.Windows.Forms.ListBox displayEquipment;
         private System.Windows.Forms.Label label1;
     }
 }

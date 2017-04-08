@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btw_search = new System.Windows.Forms.Button();
-            this.textBox_EqID = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.checkEqIDtxtbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btw_reserve = new System.Windows.Forms.Button();
-            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.reserveBtn = new System.Windows.Forms.Button();
+            this.checkStudentIDtxtbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.reserveDateTxtbox = new System.Windows.Forms.TextBox();
+            this.descriptionTxtbox = new System.Windows.Forms.TextBox();
+            this.typeTxtbox = new System.Windows.Forms.TextBox();
+            this.availability = new System.Windows.Forms.TextBox();
+            this.IDtxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,22 +46,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btw_search
+            // searchBtn
             // 
-            this.btw_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btw_search.Location = new System.Drawing.Point(262, 222);
-            this.btw_search.Name = "btw_search";
-            this.btw_search.Size = new System.Drawing.Size(132, 27);
-            this.btw_search.TabIndex = 66;
-            this.btw_search.Text = "Search";
-            this.btw_search.UseVisualStyleBackColor = true;
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Location = new System.Drawing.Point(262, 222);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(132, 27);
+            this.searchBtn.TabIndex = 66;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox_EqID
+            // checkEqIDtxtbox
             // 
-            this.textBox_EqID.Location = new System.Drawing.Point(262, 132);
-            this.textBox_EqID.Name = "textBox_EqID";
-            this.textBox_EqID.Size = new System.Drawing.Size(145, 20);
-            this.textBox_EqID.TabIndex = 65;
+            this.checkEqIDtxtbox.Location = new System.Drawing.Point(262, 132);
+            this.checkEqIDtxtbox.Name = "checkEqIDtxtbox";
+            this.checkEqIDtxtbox.Size = new System.Drawing.Size(145, 20);
+            this.checkEqIDtxtbox.TabIndex = 65;
             // 
             // label8
             // 
@@ -73,22 +73,22 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Enter equipment ID";
             // 
-            // btw_reserve
+            // reserveBtn
             // 
-            this.btw_reserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btw_reserve.Location = new System.Drawing.Point(122, 222);
-            this.btw_reserve.Name = "btw_reserve";
-            this.btw_reserve.Size = new System.Drawing.Size(100, 27);
-            this.btw_reserve.TabIndex = 63;
-            this.btw_reserve.Text = "Reserve";
-            this.btw_reserve.UseVisualStyleBackColor = true;
+            this.reserveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reserveBtn.Location = new System.Drawing.Point(122, 222);
+            this.reserveBtn.Name = "reserveBtn";
+            this.reserveBtn.Size = new System.Drawing.Size(100, 27);
+            this.reserveBtn.TabIndex = 63;
+            this.reserveBtn.Text = "Reserve";
+            this.reserveBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox_id
+            // checkStudentIDtxtbox
             // 
-            this.textBox_id.Location = new System.Drawing.Point(255, 62);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(151, 20);
-            this.textBox_id.TabIndex = 62;
+            this.checkStudentIDtxtbox.Location = new System.Drawing.Point(256, 62);
+            this.checkStudentIDtxtbox.Name = "checkStudentIDtxtbox";
+            this.checkStudentIDtxtbox.Size = new System.Drawing.Size(151, 20);
+            this.checkStudentIDtxtbox.TabIndex = 62;
             // 
             // label7
             // 
@@ -100,45 +100,45 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "Enter student  ID";
             // 
-            // textBox6
+            // reserveDateTxtbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 166);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 60;
+            this.reserveDateTxtbox.Location = new System.Drawing.Point(122, 166);
+            this.reserveDateTxtbox.Name = "reserveDateTxtbox";
+            this.reserveDateTxtbox.ReadOnly = true;
+            this.reserveDateTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.reserveDateTxtbox.TabIndex = 60;
             // 
-            // textBox5
+            // descriptionTxtbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 59;
+            this.descriptionTxtbox.Location = new System.Drawing.Point(122, 129);
+            this.descriptionTxtbox.Name = "descriptionTxtbox";
+            this.descriptionTxtbox.ReadOnly = true;
+            this.descriptionTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.descriptionTxtbox.TabIndex = 59;
             // 
-            // textBox4
+            // typeTxtbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 58;
+            this.typeTxtbox.Location = new System.Drawing.Point(122, 103);
+            this.typeTxtbox.Name = "typeTxtbox";
+            this.typeTxtbox.ReadOnly = true;
+            this.typeTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.typeTxtbox.TabIndex = 58;
             // 
-            // textBox3
+            // availability
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 57;
+            this.availability.Location = new System.Drawing.Point(122, 66);
+            this.availability.Name = "availability";
+            this.availability.ReadOnly = true;
+            this.availability.Size = new System.Drawing.Size(100, 20);
+            this.availability.TabIndex = 57;
             // 
-            // textBox2
+            // IDtxtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 56;
+            this.IDtxtbox.Location = new System.Drawing.Point(122, 26);
+            this.IDtxtbox.Name = "IDtxtbox";
+            this.IDtxtbox.ReadOnly = true;
+            this.IDtxtbox.Size = new System.Drawing.Size(100, 20);
+            this.IDtxtbox.TabIndex = 56;
             // 
             // label6
             // 
@@ -195,24 +195,24 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 261);
-            this.Controls.Add(this.btw_search);
-            this.Controls.Add(this.textBox_EqID);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.checkEqIDtxtbox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btw_reserve);
-            this.Controls.Add(this.textBox_id);
+            this.Controls.Add(this.reserveBtn);
+            this.Controls.Add(this.checkStudentIDtxtbox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.reserveDateTxtbox);
+            this.Controls.Add(this.descriptionTxtbox);
+            this.Controls.Add(this.typeTxtbox);
+            this.Controls.Add(this.availability);
+            this.Controls.Add(this.IDtxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Reserve";
-            this.Text = "Reserve";
+            this.Text = "Reserve an Equipment";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,17 +220,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btw_search;
-        private System.Windows.Forms.TextBox textBox_EqID;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.TextBox checkEqIDtxtbox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btw_reserve;
-        private System.Windows.Forms.TextBox textBox_id;
+        private System.Windows.Forms.Button reserveBtn;
+        private System.Windows.Forms.TextBox checkStudentIDtxtbox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox reserveDateTxtbox;
+        private System.Windows.Forms.TextBox descriptionTxtbox;
+        private System.Windows.Forms.TextBox typeTxtbox;
+        private System.Windows.Forms.TextBox availability;
+        private System.Windows.Forms.TextBox IDtxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

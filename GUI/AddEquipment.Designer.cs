@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addEqTxtbox = new System.Windows.Forms.Button();
+            this.maxRentalDayTxtbox = new System.Windows.Forms.TextBox();
+            this.eqDescriptionTxtbox = new System.Windows.Forms.TextBox();
+            this.eqTypeTxtbox = new System.Windows.Forms.TextBox();
+            this.eqIDtxtbox = new System.Windows.Forms.TextBox();
+            this.eqNameTxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,52 +41,52 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // addEqTxtbox
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(172, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addEqTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEqTxtbox.Location = new System.Drawing.Point(172, 226);
+            this.addEqTxtbox.Name = "addEqTxtbox";
+            this.addEqTxtbox.Size = new System.Drawing.Size(100, 23);
+            this.addEqTxtbox.TabIndex = 34;
+            this.addEqTxtbox.Text = "Add";
+            this.addEqTxtbox.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // maxRentalDayTxtbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(172, 176);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 33;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxRentalDayTxtbox.Location = new System.Drawing.Point(172, 176);
+            this.maxRentalDayTxtbox.Name = "maxRentalDayTxtbox";
+            this.maxRentalDayTxtbox.ReadOnly = true;
+            this.maxRentalDayTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.maxRentalDayTxtbox.TabIndex = 33;
+            this.maxRentalDayTxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox5
+            // eqDescriptionTxtbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(172, 150);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 32;
+            this.eqDescriptionTxtbox.Location = new System.Drawing.Point(172, 150);
+            this.eqDescriptionTxtbox.Name = "eqDescriptionTxtbox";
+            this.eqDescriptionTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.eqDescriptionTxtbox.TabIndex = 32;
             // 
-            // textBox4
+            // eqTypeTxtbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(172, 110);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 31;
+            this.eqTypeTxtbox.Location = new System.Drawing.Point(172, 110);
+            this.eqTypeTxtbox.Name = "eqTypeTxtbox";
+            this.eqTypeTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.eqTypeTxtbox.TabIndex = 31;
             // 
-            // textBox2
+            // eqIDtxtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 30;
+            this.eqIDtxtbox.Location = new System.Drawing.Point(172, 77);
+            this.eqIDtxtbox.Name = "eqIDtxtbox";
+            this.eqIDtxtbox.Size = new System.Drawing.Size(100, 20);
+            this.eqIDtxtbox.TabIndex = 30;
             // 
-            // textBox1
+            // eqNameTxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 29;
+            this.eqNameTxtbox.Location = new System.Drawing.Point(172, 31);
+            this.eqNameTxtbox.Name = "eqNameTxtbox";
+            this.eqNameTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.eqNameTxtbox.TabIndex = 29;
             // 
             // label6
             // 
@@ -143,19 +143,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addEqTxtbox);
+            this.Controls.Add(this.maxRentalDayTxtbox);
+            this.Controls.Add(this.eqDescriptionTxtbox);
+            this.Controls.Add(this.eqTypeTxtbox);
+            this.Controls.Add(this.eqIDtxtbox);
+            this.Controls.Add(this.eqNameTxtbox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddEquipment";
-            this.Text = "AddEquipment";
+            this.Text = "Add Equipment";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,12 +163,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button addEqTxtbox;
+        private System.Windows.Forms.TextBox maxRentalDayTxtbox;
+        private System.Windows.Forms.TextBox eqDescriptionTxtbox;
+        private System.Windows.Forms.TextBox eqTypeTxtbox;
+        private System.Windows.Forms.TextBox eqIDtxtbox;
+        private System.Windows.Forms.TextBox eqNameTxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

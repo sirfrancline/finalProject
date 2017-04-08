@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.staffIDtxtbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Btn_Add = new System.Windows.Forms.Button();
-            this.textBox_sN = new System.Windows.Forms.TextBox();
+            this.addStaffBtn = new System.Windows.Forms.Button();
+            this.surNameTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_Fn = new System.Windows.Forms.TextBox();
-            this.textBox_Pass = new System.Windows.Forms.TextBox();
-            this.textBox_UserN = new System.Windows.Forms.TextBox();
+            this.firstNametxtbox = new System.Windows.Forms.TextBox();
+            this.passTxtbox = new System.Windows.Forms.TextBox();
+            this.usernameTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Pass2 = new System.Windows.Forms.TextBox();
+            this.rePassTxtbox = new System.Windows.Forms.TextBox();
             this.rePass = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox_ID
+            // staffIDtxtbox
             // 
-            this.textBox_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ID.Location = new System.Drawing.Point(135, 21);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(100, 22);
-            this.textBox_ID.TabIndex = 30;
+            this.staffIDtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffIDtxtbox.Location = new System.Drawing.Point(135, 21);
+            this.staffIDtxtbox.Name = "staffIDtxtbox";
+            this.staffIDtxtbox.Size = new System.Drawing.Size(100, 22);
+            this.staffIDtxtbox.TabIndex = 30;
             // 
             // label5
             // 
@@ -57,27 +57,27 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(24, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 29;
-            this.label5.Text = "ID";
+            this.label5.Text = "Staff ID";
             // 
-            // Btn_Add
+            // addStaffBtn
             // 
-            this.Btn_Add.Location = new System.Drawing.Point(135, 226);
-            this.Btn_Add.Name = "Btn_Add";
-            this.Btn_Add.Size = new System.Drawing.Size(100, 23);
-            this.Btn_Add.TabIndex = 28;
-            this.Btn_Add.Text = "Add";
-            this.Btn_Add.UseVisualStyleBackColor = true;
-            this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
+            this.addStaffBtn.Location = new System.Drawing.Point(135, 226);
+            this.addStaffBtn.Name = "addStaffBtn";
+            this.addStaffBtn.Size = new System.Drawing.Size(100, 23);
+            this.addStaffBtn.TabIndex = 28;
+            this.addStaffBtn.Text = "Add";
+            this.addStaffBtn.UseVisualStyleBackColor = true;
+            this.addStaffBtn.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
-            // textBox_sN
+            // surNameTxtbox
             // 
-            this.textBox_sN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_sN.Location = new System.Drawing.Point(135, 87);
-            this.textBox_sN.Name = "textBox_sN";
-            this.textBox_sN.Size = new System.Drawing.Size(100, 22);
-            this.textBox_sN.TabIndex = 27;
+            this.surNameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surNameTxtbox.Location = new System.Drawing.Point(135, 87);
+            this.surNameTxtbox.Name = "surNameTxtbox";
+            this.surNameTxtbox.Size = new System.Drawing.Size(100, 22);
+            this.surNameTxtbox.TabIndex = 27;
             // 
             // label4
             // 
@@ -89,29 +89,29 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Surname";
             // 
-            // textBox_Fn
+            // firstNametxtbox
             // 
-            this.textBox_Fn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Fn.Location = new System.Drawing.Point(135, 54);
-            this.textBox_Fn.Name = "textBox_Fn";
-            this.textBox_Fn.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Fn.TabIndex = 25;
+            this.firstNametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNametxtbox.Location = new System.Drawing.Point(135, 54);
+            this.firstNametxtbox.Name = "firstNametxtbox";
+            this.firstNametxtbox.Size = new System.Drawing.Size(100, 22);
+            this.firstNametxtbox.TabIndex = 25;
             // 
-            // textBox_Pass
+            // passTxtbox
             // 
-            this.textBox_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Pass.Location = new System.Drawing.Point(135, 151);
-            this.textBox_Pass.Name = "textBox_Pass";
-            this.textBox_Pass.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Pass.TabIndex = 24;
+            this.passTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passTxtbox.Location = new System.Drawing.Point(135, 151);
+            this.passTxtbox.Name = "passTxtbox";
+            this.passTxtbox.Size = new System.Drawing.Size(100, 22);
+            this.passTxtbox.TabIndex = 24;
             // 
-            // textBox_UserN
+            // usernameTxt
             // 
-            this.textBox_UserN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_UserN.Location = new System.Drawing.Point(135, 118);
-            this.textBox_UserN.Name = "textBox_UserN";
-            this.textBox_UserN.Size = new System.Drawing.Size(100, 22);
-            this.textBox_UserN.TabIndex = 23;
+            this.usernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTxt.Location = new System.Drawing.Point(135, 118);
+            this.usernameTxt.Name = "usernameTxt";
+            this.usernameTxt.Size = new System.Drawing.Size(100, 22);
+            this.usernameTxt.TabIndex = 23;
             // 
             // label3
             // 
@@ -143,13 +143,13 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Username";
             // 
-            // textBox_Pass2
+            // rePassTxtbox
             // 
-            this.textBox_Pass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Pass2.Location = new System.Drawing.Point(135, 179);
-            this.textBox_Pass2.Name = "textBox_Pass2";
-            this.textBox_Pass2.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Pass2.TabIndex = 32;
+            this.rePassTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rePassTxtbox.Location = new System.Drawing.Point(135, 179);
+            this.rePassTxtbox.Name = "rePassTxtbox";
+            this.rePassTxtbox.Size = new System.Drawing.Size(100, 22);
+            this.rePassTxtbox.TabIndex = 32;
             // 
             // rePass
             // 
@@ -166,21 +166,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.textBox_Pass2);
+            this.Controls.Add(this.rePassTxtbox);
             this.Controls.Add(this.rePass);
-            this.Controls.Add(this.textBox_ID);
+            this.Controls.Add(this.staffIDtxtbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Btn_Add);
-            this.Controls.Add(this.textBox_sN);
+            this.Controls.Add(this.addStaffBtn);
+            this.Controls.Add(this.surNameTxtbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_Fn);
-            this.Controls.Add(this.textBox_Pass);
-            this.Controls.Add(this.textBox_UserN);
+            this.Controls.Add(this.firstNametxtbox);
+            this.Controls.Add(this.passTxtbox);
+            this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddStaff";
-            this.Text = "AddStaff";
+            this.Text = "Add Staff";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,18 +188,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_ID;
+        private System.Windows.Forms.TextBox staffIDtxtbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button Btn_Add;
-        private System.Windows.Forms.TextBox textBox_sN;
+        private System.Windows.Forms.Button addStaffBtn;
+        private System.Windows.Forms.TextBox surNameTxtbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_Fn;
-        private System.Windows.Forms.TextBox textBox_Pass;
-        private System.Windows.Forms.TextBox textBox_UserN;
+        private System.Windows.Forms.TextBox firstNametxtbox;
+        private System.Windows.Forms.TextBox passTxtbox;
+        private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_Pass2;
+        private System.Windows.Forms.TextBox rePassTxtbox;
         private System.Windows.Forms.Label rePass;
     }
 }

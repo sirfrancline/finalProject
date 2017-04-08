@@ -28,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.staffIDbtn = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox_sN = new System.Windows.Forms.TextBox();
+            this.surNametxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox_Fn = new System.Windows.Forms.TextBox();
-            this.textBox_Pass = new System.Windows.Forms.TextBox();
-            this.textBox_UserN = new System.Windows.Forms.TextBox();
+            this.firstNametxtbox = new System.Windows.Forms.TextBox();
+            this.passtxtbox = new System.Windows.Forms.TextBox();
+            this.usernametxtbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.newPasstxtbox = new System.Windows.Forms.TextBox();
+            this.newUsernametxtbox = new System.Windows.Forms.TextBox();
+            this.newSurNametxtbox = new System.Windows.Forms.TextBox();
+            this.newFirstNametxtbox = new System.Windows.Forms.TextBox();
+            this.newStafIDtxtbox = new System.Windows.Forms.TextBox();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.rePasstxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.newRePasstxtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox_ID
+            // staffIDbtn
             // 
-            this.textBox_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ID.Location = new System.Drawing.Point(140, 23);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.ReadOnly = true;
-            this.textBox_ID.Size = new System.Drawing.Size(100, 22);
-            this.textBox_ID.TabIndex = 92;
+            this.staffIDbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffIDbtn.Location = new System.Drawing.Point(140, 23);
+            this.staffIDbtn.Name = "staffIDbtn";
+            this.staffIDbtn.ReadOnly = true;
+            this.staffIDbtn.Size = new System.Drawing.Size(100, 22);
+            this.staffIDbtn.TabIndex = 92;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 29);
+            this.label5.Location = new System.Drawing.Point(4, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 91;
             this.label5.Text = "Staff ID";
             // 
-            // textBox_sN
+            // surNametxtbox
             // 
-            this.textBox_sN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_sN.Location = new System.Drawing.Point(140, 91);
-            this.textBox_sN.Name = "textBox_sN";
-            this.textBox_sN.ReadOnly = true;
-            this.textBox_sN.Size = new System.Drawing.Size(100, 22);
-            this.textBox_sN.TabIndex = 90;
+            this.surNametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surNametxtbox.Location = new System.Drawing.Point(140, 91);
+            this.surNametxtbox.Name = "surNametxtbox";
+            this.surNametxtbox.ReadOnly = true;
+            this.surNametxtbox.Size = new System.Drawing.Size(100, 22);
+            this.surNametxtbox.TabIndex = 90;
             // 
             // label4
             // 
@@ -88,32 +88,32 @@
             this.label4.TabIndex = 89;
             this.label4.Text = "Surname";
             // 
-            // textBox_Fn
+            // firstNametxtbox
             // 
-            this.textBox_Fn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Fn.Location = new System.Drawing.Point(140, 55);
-            this.textBox_Fn.Name = "textBox_Fn";
-            this.textBox_Fn.ReadOnly = true;
-            this.textBox_Fn.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Fn.TabIndex = 88;
+            this.firstNametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNametxtbox.Location = new System.Drawing.Point(140, 55);
+            this.firstNametxtbox.Name = "firstNametxtbox";
+            this.firstNametxtbox.ReadOnly = true;
+            this.firstNametxtbox.Size = new System.Drawing.Size(100, 22);
+            this.firstNametxtbox.TabIndex = 88;
             // 
-            // textBox_Pass
+            // passtxtbox
             // 
-            this.textBox_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Pass.Location = new System.Drawing.Point(140, 155);
-            this.textBox_Pass.Name = "textBox_Pass";
-            this.textBox_Pass.ReadOnly = true;
-            this.textBox_Pass.Size = new System.Drawing.Size(100, 22);
-            this.textBox_Pass.TabIndex = 87;
+            this.passtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passtxtbox.Location = new System.Drawing.Point(140, 155);
+            this.passtxtbox.Name = "passtxtbox";
+            this.passtxtbox.ReadOnly = true;
+            this.passtxtbox.Size = new System.Drawing.Size(100, 22);
+            this.passtxtbox.TabIndex = 87;
             // 
-            // textBox_UserN
+            // usernametxtbox
             // 
-            this.textBox_UserN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_UserN.Location = new System.Drawing.Point(140, 119);
-            this.textBox_UserN.Name = "textBox_UserN";
-            this.textBox_UserN.ReadOnly = true;
-            this.textBox_UserN.Size = new System.Drawing.Size(100, 22);
-            this.textBox_UserN.TabIndex = 86;
+            this.usernametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernametxtbox.Location = new System.Drawing.Point(140, 119);
+            this.usernametxtbox.Name = "usernametxtbox";
+            this.usernametxtbox.ReadOnly = true;
+            this.usernametxtbox.Size = new System.Drawing.Size(100, 22);
+            this.usernametxtbox.TabIndex = 86;
             // 
             // label3
             // 
@@ -145,69 +145,69 @@
             this.label1.TabIndex = 83;
             this.label1.Text = "Username";
             // 
-            // textBox5
+            // newPasstxtbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(264, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 82;
+            this.newPasstxtbox.Location = new System.Drawing.Point(264, 154);
+            this.newPasstxtbox.Name = "newPasstxtbox";
+            this.newPasstxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newPasstxtbox.TabIndex = 82;
             // 
-            // textBox4
+            // newUsernametxtbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(264, 116);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 81;
+            this.newUsernametxtbox.Location = new System.Drawing.Point(264, 116);
+            this.newUsernametxtbox.Name = "newUsernametxtbox";
+            this.newUsernametxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newUsernametxtbox.TabIndex = 81;
             // 
-            // textBox3
+            // newSurNametxtbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(264, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 80;
+            this.newSurNametxtbox.Location = new System.Drawing.Point(264, 90);
+            this.newSurNametxtbox.Name = "newSurNametxtbox";
+            this.newSurNametxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newSurNametxtbox.TabIndex = 80;
             // 
-            // textBox2
+            // newFirstNametxtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(264, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 79;
+            this.newFirstNametxtbox.Location = new System.Drawing.Point(264, 60);
+            this.newFirstNametxtbox.Name = "newFirstNametxtbox";
+            this.newFirstNametxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newFirstNametxtbox.TabIndex = 79;
             // 
-            // textBox1
+            // newStafIDtxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 78;
+            this.newStafIDtxtbox.Location = new System.Drawing.Point(264, 25);
+            this.newStafIDtxtbox.Name = "newStafIDtxtbox";
+            this.newStafIDtxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newStafIDtxtbox.TabIndex = 78;
             // 
-            // button2
+            // updateBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(140, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 77;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Location = new System.Drawing.Point(140, 226);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(94, 23);
+            this.updateBtn.TabIndex = 77;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // exitBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(264, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(264, 226);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(100, 23);
+            this.exitBtn.TabIndex = 76;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // rePasstxtbox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(140, 182);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(98, 22);
-            this.textBox6.TabIndex = 95;
+            this.rePasstxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rePasstxtbox.Location = new System.Drawing.Point(140, 182);
+            this.rePasstxtbox.Name = "rePasstxtbox";
+            this.rePasstxtbox.ReadOnly = true;
+            this.rePasstxtbox.Size = new System.Drawing.Size(98, 22);
+            this.rePasstxtbox.TabIndex = 95;
             // 
             // label6
             // 
@@ -219,40 +219,40 @@
             this.label6.TabIndex = 94;
             this.label6.Text = "Retype Password";
             // 
-            // textBox7
+            // newRePasstxtbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(264, 182);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 93;
+            this.newRePasstxtbox.Location = new System.Drawing.Point(264, 182);
+            this.newRePasstxtbox.Name = "newRePasstxtbox";
+            this.newRePasstxtbox.Size = new System.Drawing.Size(100, 20);
+            this.newRePasstxtbox.TabIndex = 93;
             // 
             // UpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 261);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.rePasstxtbox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox_ID);
+            this.Controls.Add(this.newRePasstxtbox);
+            this.Controls.Add(this.staffIDbtn);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox_sN);
+            this.Controls.Add(this.surNametxtbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_Fn);
-            this.Controls.Add(this.textBox_Pass);
-            this.Controls.Add(this.textBox_UserN);
+            this.Controls.Add(this.firstNametxtbox);
+            this.Controls.Add(this.passtxtbox);
+            this.Controls.Add(this.usernametxtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.newPasstxtbox);
+            this.Controls.Add(this.newUsernametxtbox);
+            this.Controls.Add(this.newSurNametxtbox);
+            this.Controls.Add(this.newFirstNametxtbox);
+            this.Controls.Add(this.newStafIDtxtbox);
+            this.Controls.Add(this.updateBtn);
+            this.Controls.Add(this.exitBtn);
             this.Name = "UpdateStaff";
-            this.Text = "UpdateStaff";
+            this.Text = "Please Update Staff";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,25 +260,25 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_ID;
+        private System.Windows.Forms.TextBox staffIDbtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox_sN;
+        private System.Windows.Forms.TextBox surNametxtbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox_Fn;
-        private System.Windows.Forms.TextBox textBox_Pass;
-        private System.Windows.Forms.TextBox textBox_UserN;
+        private System.Windows.Forms.TextBox firstNametxtbox;
+        private System.Windows.Forms.TextBox passtxtbox;
+        private System.Windows.Forms.TextBox usernametxtbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox newPasstxtbox;
+        private System.Windows.Forms.TextBox newUsernametxtbox;
+        private System.Windows.Forms.TextBox newSurNametxtbox;
+        private System.Windows.Forms.TextBox newFirstNametxtbox;
+        private System.Windows.Forms.TextBox newStafIDtxtbox;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.TextBox rePasstxtbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox newRePasstxtbox;
     }
 }

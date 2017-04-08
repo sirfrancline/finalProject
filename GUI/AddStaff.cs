@@ -22,11 +22,11 @@ namespace finalProject.GUI
         {
             var stuffMember = new Staff
             {
-                FirstName = textBox_Fn.Text,
-                Password = textBox_Pass.Text,
-                IdNumber = textBox_ID.Text,
-                Surname = textBox_sN.Text,
-                Username = textBox_UserN.Text,
+                FirstName = firstNametxtbox.Text,
+                Password = passTxtbox.Text,
+                IdNumber = staffIDtxtbox.Text,
+                Surname = surNameTxtbox.Text,
+                Username = usernameTxt.Text,
             };
 
             var writer = new StaffWriter();

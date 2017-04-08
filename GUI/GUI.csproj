@@ -82,11 +82,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="RentalSystem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="RentalSystem.Designer.cs">
+      <DependentUpon>RentalSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,17 +114,17 @@
     <Compile Include="ViewAddUpdateDeleteStaff.Designer.cs">
       <DependentUpon>ViewAddUpdateDeleteStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="View_Equipment.cs">
+    <Compile Include="DisplayEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View_Equipment.Designer.cs">
-      <DependentUpon>View_Equipment.cs</DependentUpon>
+    <Compile Include="DisplayEquipment.Designer.cs">
+      <DependentUpon>DisplayEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="View_Student.cs">
+    <Compile Include="DisplayStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View_Student.Designer.cs">
-      <DependentUpon>View_Student.cs</DependentUpon>
+    <Compile Include="DisplayStudent.Designer.cs">
+      <DependentUpon>DisplayStudent.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddEquipment.resx">
       <DependentUpon>AddEquipment.cs</DependentUpon>
@@ -141,8 +141,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="RentalSystem.resx">
+      <DependentUpon>RentalSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,11 +165,11 @@
     <EmbeddedResource Include="ViewAddUpdateDeleteStaff.resx">
       <DependentUpon>ViewAddUpdateDeleteStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View_Equipment.resx">
-      <DependentUpon>View_Equipment.cs</DependentUpon>
+    <EmbeddedResource Include="DisplayEquipment.resx">
+      <DependentUpon>DisplayEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View_Student.resx">
-      <DependentUpon>View_Student.cs</DependentUpon>
+    <EmbeddedResource Include="DisplayStudent.resx">
+      <DependentUpon>DisplayStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

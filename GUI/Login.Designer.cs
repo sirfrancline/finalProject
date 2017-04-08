@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.text_username = new System.Windows.Forms.TextBox();
-            this.text_password = new System.Windows.Forms.TextBox();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.usernameTxtbox = new System.Windows.Forms.TextBox();
+            this.passTxtbox = new System.Windows.Forms.TextBox();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,38 +53,38 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // text_username
+            // usernameTxtbox
             // 
-            this.text_username.Location = new System.Drawing.Point(103, 31);
-            this.text_username.Name = "text_username";
-            this.text_username.Size = new System.Drawing.Size(116, 20);
-            this.text_username.TabIndex = 2;
+            this.usernameTxtbox.Location = new System.Drawing.Point(103, 31);
+            this.usernameTxtbox.Name = "usernameTxtbox";
+            this.usernameTxtbox.Size = new System.Drawing.Size(116, 20);
+            this.usernameTxtbox.TabIndex = 2;
             // 
-            // text_password
+            // passTxtbox
             // 
-            this.text_password.Location = new System.Drawing.Point(103, 57);
-            this.text_password.Name = "text_password";
-            this.text_password.Size = new System.Drawing.Size(116, 20);
-            this.text_password.TabIndex = 3;
+            this.passTxtbox.Location = new System.Drawing.Point(103, 57);
+            this.passTxtbox.Name = "passTxtbox";
+            this.passTxtbox.Size = new System.Drawing.Size(116, 20);
+            this.passTxtbox.TabIndex = 3;
             // 
-            // btn_login
+            // loginBtn
             // 
-            this.btn_login.Location = new System.Drawing.Point(144, 98);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(75, 23);
-            this.btn_login.TabIndex = 4;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.loginBtn.Location = new System.Drawing.Point(144, 98);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(75, 23);
+            this.loginBtn.TabIndex = 4;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 151);
-            this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.text_password);
-            this.Controls.Add(this.text_username);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.passTxtbox);
+            this.Controls.Add(this.usernameTxtbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -98,8 +98,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox text_username;
-        private System.Windows.Forms.TextBox text_password;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.TextBox usernameTxtbox;
+        private System.Windows.Forms.TextBox passTxtbox;
+        private System.Windows.Forms.Button loginBtn;
     }
 }
