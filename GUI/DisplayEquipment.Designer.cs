@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.searchEqIDtxtbox = new System.Windows.Forms.TextBox();
-            this.displayEquipment = new System.Windows.Forms.ListBox();
+            this.displayEqlbox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.searchEqBtn = new System.Windows.Forms.Button();
             this.viewEqBtn = new System.Windows.Forms.Button();
-            this.displayEquipments = new System.Windows.Forms.ListBox();
+            this.displayAllEqlbox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -44,13 +44,13 @@
             this.searchEqIDtxtbox.Size = new System.Drawing.Size(208, 20);
             this.searchEqIDtxtbox.TabIndex = 55;
             // 
-            // displayEquipment
+            // displayEqlbox
             // 
-            this.displayEquipment.FormattingEnabled = true;
-            this.displayEquipment.Location = new System.Drawing.Point(12, 114);
-            this.displayEquipment.Name = "displayEquipment";
-            this.displayEquipment.Size = new System.Drawing.Size(289, 69);
-            this.displayEquipment.TabIndex = 54;
+            this.displayEqlbox.FormattingEnabled = true;
+            this.displayEqlbox.Location = new System.Drawing.Point(12, 114);
+            this.displayEqlbox.Name = "displayEqlbox";
+            this.displayEqlbox.Size = new System.Drawing.Size(289, 69);
+            this.displayEqlbox.TabIndex = 54;
             // 
             // label2
             // 
@@ -70,6 +70,7 @@
             this.searchEqBtn.TabIndex = 56;
             this.searchEqBtn.Text = "SEARCH";
             this.searchEqBtn.UseVisualStyleBackColor = true;
+            this.searchEqBtn.Click += new System.EventHandler(this.searchEqBtn_Click);
             // 
             // viewEqBtn
             // 
@@ -79,14 +80,15 @@
             this.viewEqBtn.TabIndex = 58;
             this.viewEqBtn.Text = "VIEW";
             this.viewEqBtn.UseVisualStyleBackColor = true;
+            this.viewEqBtn.Click += new System.EventHandler(this.viewEqBtn_Click);
             // 
-            // displayEquipments
+            // displayAllEqlbox
             // 
-            this.displayEquipments.FormattingEnabled = true;
-            this.displayEquipments.Location = new System.Drawing.Point(307, 114);
-            this.displayEquipments.Name = "displayEquipments";
-            this.displayEquipments.Size = new System.Drawing.Size(296, 199);
-            this.displayEquipments.TabIndex = 57;
+            this.displayAllEqlbox.FormattingEnabled = true;
+            this.displayAllEqlbox.Location = new System.Drawing.Point(307, 114);
+            this.displayAllEqlbox.Name = "displayAllEqlbox";
+            this.displayAllEqlbox.Size = new System.Drawing.Size(296, 199);
+            this.displayAllEqlbox.TabIndex = 57;
             // 
             // label1
             // 
@@ -105,10 +107,10 @@
             this.ClientSize = new System.Drawing.Size(615, 332);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewEqBtn);
-            this.Controls.Add(this.displayEquipments);
+            this.Controls.Add(this.displayAllEqlbox);
             this.Controls.Add(this.searchEqBtn);
             this.Controls.Add(this.searchEqIDtxtbox);
-            this.Controls.Add(this.displayEquipment);
+            this.Controls.Add(this.displayEqlbox);
             this.Controls.Add(this.label2);
             this.Name = "View_Equipment";
             this.Text = "Display Equipment";
@@ -120,11 +122,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox searchEqIDtxtbox;
-        private System.Windows.Forms.ListBox displayEquipment;
+        private System.Windows.Forms.ListBox displayEqlbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button searchEqBtn;
         private System.Windows.Forms.Button viewEqBtn;
-        private System.Windows.Forms.ListBox displayEquipments;
+        private System.Windows.Forms.ListBox displayAllEqlbox;
         private System.Windows.Forms.Label label1;
     }
 }

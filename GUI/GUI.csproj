@@ -96,6 +96,12 @@
     <Compile Include="Reserve.Designer.cs">
       <DependentUpon>Reserve.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEquipment.Designer.cs">
+      <DependentUpon>UpdateEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Reserve.resx">
       <DependentUpon>Reserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEquipment.resx">
+      <DependentUpon>UpdateEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>

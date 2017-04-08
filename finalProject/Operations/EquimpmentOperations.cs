@@ -80,9 +80,9 @@ namespace finalProject
             {
                 case 1:
                     Console.WriteLine("******Equipment List*******");
-                    foreach (var e in _equipmentList)
+                    foreach (var eq in _equipmentList)
                     {
-                        //  e.Display();
+                        Console.WriteLine($" display student : {eq}");
                     }
                     break;
 
