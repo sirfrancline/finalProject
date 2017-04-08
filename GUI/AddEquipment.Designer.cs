@@ -50,6 +50,7 @@
             this.addEqTxtbox.TabIndex = 34;
             this.addEqTxtbox.Text = "Add";
             this.addEqTxtbox.UseVisualStyleBackColor = true;
+            this.addEqTxtbox.Click += new System.EventHandler(this.addEqTxtbox_Click);
             // 
             // maxRentalDayTxtbox
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using finalProject.Persistence.Writers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,22 @@ namespace finalProject.GUI
             InitializeComponent();
         }
 
-       
+        private void addEqTxtbox_Click(object sender, EventArgs e)
+        {
+            var colleEquipment = new Equimpment()
+            {
+                ID = eqIDtxtbox.Text,
+                Type = eqTypeTxtbox.Text,
+                Description = eqDescriptionTxtbox.Text,
+                MaxRentalDays = Convert.ToInt32(maxRentalDayTxtbox.Text)
+
+
+
+            };
+
+            var eqWriter = new EquipmentWriter();
+            eqWriter.Add(colleEquipment);
+            MessageBox.Show("new equipment saved");
+        }
     }
 }

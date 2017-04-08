@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace finalProject.classes
 {
-    public partial class equipment_Status : Form
+    public partial class checkEqAvailability : Form
     {
 
         EquipmentReader _reader = new EquipmentReader();
 
 
 
-        public equipment_Status()
+        public checkEqAvailability()
         {
             InitializeComponent();
         }
@@ -32,10 +32,10 @@ namespace finalProject.classes
         {
             var items = _reader.GetAllEquipment();
 
-            listBox1.Items.Clear();
+            statuslbox.Items.Clear();
             foreach (var item in items)
             {
-                listBox1.Items.Add($"{item.Value.ID}, {item.Value.Type},{item.Value.Description}  ");
+                statuslbox.Items.Add($"{item.Value.ID}, {item.Value.Type},{item.Value.Description}  ");
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace finalProject.classes
 {
-    partial class equipment_Status
+    partial class checkEqAvailability
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_viewStatus = new System.Windows.Forms.Button();
+            this.checkBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.statuslbox = new System.Windows.Forms.ListBox();
+            this.eqIDtxtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btn_viewStatus
+            // checkBtn
             // 
-            this.btn_viewStatus.Location = new System.Drawing.Point(178, 40);
-            this.btn_viewStatus.Name = "btn_viewStatus";
-            this.btn_viewStatus.Size = new System.Drawing.Size(75, 23);
-            this.btn_viewStatus.TabIndex = 11;
-            this.btn_viewStatus.Text = "View status";
-            this.btn_viewStatus.UseVisualStyleBackColor = true;
-            this.btn_viewStatus.Click += new System.EventHandler(this.btn_viewStatus_Click);
+            this.checkBtn.Location = new System.Drawing.Point(165, 40);
+            this.checkBtn.Name = "checkBtn";
+            this.checkBtn.Size = new System.Drawing.Size(94, 23);
+            this.checkBtn.TabIndex = 11;
+            this.checkBtn.Text = "Check";
+            this.checkBtn.UseVisualStyleBackColor = true;
+            this.checkBtn.Click += new System.EventHandler(this.btn_viewStatus_Click);
             // 
             // label1
             // 
@@ -53,32 +53,32 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Search Equipment By ID";
             // 
-            // listBox1
+            // statuslbox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 66);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(260, 186);
-            this.listBox1.TabIndex = 15;
+            this.statuslbox.FormattingEnabled = true;
+            this.statuslbox.Location = new System.Drawing.Point(12, 66);
+            this.statuslbox.Name = "statuslbox";
+            this.statuslbox.Size = new System.Drawing.Size(247, 43);
+            this.statuslbox.TabIndex = 15;
             // 
-            // textBox1
+            // eqIDtxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 13;
+            this.eqIDtxtbox.Location = new System.Drawing.Point(12, 40);
+            this.eqIDtxtbox.Name = "eqIDtxtbox";
+            this.eqIDtxtbox.Size = new System.Drawing.Size(147, 20);
+            this.eqIDtxtbox.TabIndex = 13;
             // 
-            // equipment_Status
+            // checkEqAvailability
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(262, 127);
+            this.Controls.Add(this.statuslbox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_viewStatus);
-            this.Name = "equipment_Status";
-            this.Text = "equipment_Status";
+            this.Controls.Add(this.eqIDtxtbox);
+            this.Controls.Add(this.checkBtn);
+            this.Name = "checkEqAvailability";
+            this.Text = "Check Equipment Availability";
             this.Load += new System.EventHandler(this.equipment_Status_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -87,9 +87,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_viewStatus;
+        private System.Windows.Forms.Button checkBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox statuslbox;
+        private System.Windows.Forms.TextBox eqIDtxtbox;
     }
 }

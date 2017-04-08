@@ -58,17 +58,17 @@
     <Compile Include="AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="equipment_Status.cs">
+    <Compile Include="EnquireEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="equipment_Status.Designer.cs">
-      <DependentUpon>equipment_Status.cs</DependentUpon>
+    <Compile Include="EnquireEquipment.Designer.cs">
+      <DependentUpon>EnquireEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DisplayStaffMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DisplayStaffMember.Designer.cs">
+      <DependentUpon>DisplayStaffMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Issue.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,11 @@
     <EmbeddedResource Include="AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="equipment_Status.resx">
-      <DependentUpon>equipment_Status.cs</DependentUpon>
+    <EmbeddedResource Include="EnquireEquipment.resx">
+      <DependentUpon>EnquireEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayStaffMember.resx">
+      <DependentUpon>DisplayStaffMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Issue.resx">
       <DependentUpon>Issue.cs</DependentUpon>
