@@ -64,8 +64,10 @@
             // 
             this.passTxtbox.Location = new System.Drawing.Point(103, 57);
             this.passTxtbox.Name = "passTxtbox";
+            this.passTxtbox.PasswordChar = '-';
             this.passTxtbox.Size = new System.Drawing.Size(116, 20);
             this.passTxtbox.TabIndex = 3;
+            this.passTxtbox.TextChanged += new System.EventHandler(this.passTxtbox_TextChanged);
             // 
             // loginBtn
             // 
@@ -89,6 +91,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Please Login ";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

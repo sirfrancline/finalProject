@@ -20,8 +20,8 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             ///
 
-            Application.Run(new AddStaff());
-           //Application.Run(new Login());
+            //Application.Run(new AddStaff());
+           Application.Run(new Login());
         }
     }
 }

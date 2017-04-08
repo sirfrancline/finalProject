@@ -56,5 +56,18 @@ namespace finalProject.Persistence.Readers
 
             return stuff;
         }
+
+        public bool Authorize(string loginName, string password)
+        {
+            var staffList = GetAllStuffMembers();
+            var authorised = false;
+            var user = staffList.FirstOrDefault(s => s.Value.Username == loginName);
+            if (user.Value != null)
+            {
+                authorised = staffList[user.Value.IdNumber].Password == password;
+            }
+
+            return authorised;
+        }
     }
 }

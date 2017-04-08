@@ -52,10 +52,10 @@
     <Compile Include="AddEquipment.Designer.cs">
       <DependentUpon>AddEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStaff.cs">
+    <Compile Include="Staff\AddStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStaff.Designer.cs">
+    <Compile Include="Staff\AddStaff.Designer.cs">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="EnquireEquipment.cs">
@@ -64,10 +64,10 @@
     <Compile Include="EnquireEquipment.Designer.cs">
       <DependentUpon>EnquireEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisplayStaffMember.cs">
+    <Compile Include="Staff\DisplayStaffMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DisplayStaffMember.Designer.cs">
+    <Compile Include="Staff\DisplayStaffMember.Designer.cs">
       <DependentUpon>DisplayStaffMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Issue.cs">
@@ -102,10 +102,10 @@
     <Compile Include="UpdateEquipment.Designer.cs">
       <DependentUpon>UpdateEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStaff.cs">
+    <Compile Include="Staff\UpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateStaff.Designer.cs">
+    <Compile Include="Staff\UpdateStaff.Designer.cs">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewAddUpdateDeleteEquipment.cs">
@@ -114,10 +114,10 @@
     <Compile Include="ViewAddUpdateDeleteEquipment.Designer.cs">
       <DependentUpon>ViewAddUpdateDeleteEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewAddUpdateDeleteStaff.cs">
+    <Compile Include="Staff\ViewAddUpdateDeleteStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewAddUpdateDeleteStaff.Designer.cs">
+    <Compile Include="Staff\ViewAddUpdateDeleteStaff.Designer.cs">
       <DependentUpon>ViewAddUpdateDeleteStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="DisplayEquipment.cs">
@@ -135,13 +135,13 @@
     <EmbeddedResource Include="AddEquipment.resx">
       <DependentUpon>AddEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStaff.resx">
+    <EmbeddedResource Include="Staff\AddStaff.resx">
       <DependentUpon>AddStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnquireEquipment.resx">
       <DependentUpon>EnquireEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DisplayStaffMember.resx">
+    <EmbeddedResource Include="Staff\DisplayStaffMember.resx">
       <DependentUpon>DisplayStaffMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Issue.resx">
@@ -168,13 +168,13 @@
     <EmbeddedResource Include="UpdateEquipment.resx">
       <DependentUpon>UpdateEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateStaff.resx">
+    <EmbeddedResource Include="Staff\UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAddUpdateDeleteEquipment.resx">
       <DependentUpon>ViewAddUpdateDeleteEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewAddUpdateDeleteStaff.resx">
+    <EmbeddedResource Include="Staff\ViewAddUpdateDeleteStaff.resx">
       <DependentUpon>ViewAddUpdateDeleteStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisplayEquipment.resx">

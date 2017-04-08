@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.adminstratorBtn = new System.Windows.Forms.Button();
             this.equipmentBtn = new System.Windows.Forms.Button();
             this.studentBtn = new System.Windows.Forms.Button();
             this.bookingBtn = new System.Windows.Forms.Button();
             this.staffBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // adminstratorBtn
-            // 
-            this.adminstratorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminstratorBtn.Location = new System.Drawing.Point(93, 5);
-            this.adminstratorBtn.Name = "adminstratorBtn";
-            this.adminstratorBtn.Size = new System.Drawing.Size(155, 58);
-            this.adminstratorBtn.TabIndex = 14;
-            this.adminstratorBtn.Text = "ADMINSTRATOR";
-            this.adminstratorBtn.UseVisualStyleBackColor = true;
             // 
             // equipmentBtn
             // 
@@ -84,26 +73,26 @@
             this.staffBtn.TabIndex = 10;
             this.staffBtn.Text = "STAFF";
             this.staffBtn.UseVisualStyleBackColor = true;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // theRentalSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 261);
-            this.Controls.Add(this.adminstratorBtn);
             this.Controls.Add(this.equipmentBtn);
             this.Controls.Add(this.studentBtn);
             this.Controls.Add(this.bookingBtn);
             this.Controls.Add(this.staffBtn);
             this.Name = "theRentalSystem";
             this.Text = "The Rental System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.theRentalSystem_FormClosed);
+            this.Load += new System.EventHandler(this.theRentalSystem_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button adminstratorBtn;
         private System.Windows.Forms.Button equipmentBtn;
         private System.Windows.Forms.Button studentBtn;
         private System.Windows.Forms.Button bookingBtn;

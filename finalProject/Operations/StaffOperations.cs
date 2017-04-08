@@ -11,11 +11,12 @@ namespace finalProject
         private Dictionary<string, Staff> _staffList;
         private string _prompt;
         private StaffWriter _writer = new StaffWriter();
+        private StaffReader _reader;
 
         public void Start()
         {
-            var reader = new StaffReader();
-            _staffList = reader.GetAllStuffMembers();
+            _reader = new StaffReader();
+            _staffList = _reader.GetAllStuffMembers();
         }
 
         public void HandleMenuItems()
@@ -171,16 +172,13 @@ namespace finalProject
 
             Console.WriteLine("Please provide password");
             var password = LoginHelper.GetPassword();
-            var authorised = false;
-
-            var user = _staffList.FirstOrDefault(s => s.Value.Username == loginName);
-            if (user.Value != null)
-            {
-                authorised = _staffList[user.Value.IdNumber].Password == password;
-            }
+            
+            var authorised = _reader.Authorize(loginName, password);
 
             return authorised;
         }
+
+        
 
         private void Firstname(string idGotFromUser)
         {

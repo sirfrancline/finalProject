@@ -1,4 +1,6 @@
-﻿using System;
+﻿using finalProject.Operations;
+using finalProject.Persistence.Readers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,28 @@ namespace finalProject.classes
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            var reader = new StaffReader();
+            var canWeOpenNextForm = reader.Authorize(usernameTxtbox.Text, passTxtbox.Text);
+            if (canWeOpenNextForm)
+            {
+                var rentalSystem = new theRentalSystem();
+                rentalSystem.Show();
+                this.Hide();
+            }
+            else {
+                MessageBox.Show("User/Password do not match...");
+                passTxtbox.Text = string.Empty;
+            }
+        }
 
+        private void passTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }    
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
