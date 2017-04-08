@@ -44,7 +44,6 @@
             this.newFirstNametxtbox = new System.Windows.Forms.TextBox();
             this.newStafIDtxtbox = new System.Windows.Forms.TextBox();
             this.updateBtn = new System.Windows.Forms.Button();
-            this.exitBtn = new System.Windows.Forms.Button();
             this.rePasstxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.newRePasstxtbox = new System.Windows.Forms.TextBox();
@@ -183,22 +182,12 @@
             // updateBtn
             // 
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(140, 226);
+            this.updateBtn.Location = new System.Drawing.Point(264, 226);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(94, 23);
             this.updateBtn.TabIndex = 77;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(264, 226);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(100, 23);
-            this.exitBtn.TabIndex = 76;
-            this.exitBtn.Text = "Exit";
-            this.exitBtn.UseVisualStyleBackColor = true;
             // 
             // rePasstxtbox
             // 
@@ -250,7 +239,6 @@
             this.Controls.Add(this.newFirstNametxtbox);
             this.Controls.Add(this.newStafIDtxtbox);
             this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.exitBtn);
             this.Name = "UpdateStaff";
             this.Text = "Please Update Staff";
             this.ResumeLayout(false);
@@ -276,7 +264,6 @@
         private System.Windows.Forms.TextBox newFirstNametxtbox;
         private System.Windows.Forms.TextBox newStafIDtxtbox;
         private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.TextBox rePasstxtbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox newRePasstxtbox;

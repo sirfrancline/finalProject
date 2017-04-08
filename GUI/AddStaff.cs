@@ -20,7 +20,7 @@ namespace finalProject.GUI
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
-            var stuffMember = new Staff
+            var staffMember = new Staff
             {
                 FirstName = firstNametxtbox.Text,
                 Password = passTxtbox.Text,
@@ -30,7 +30,7 @@ namespace finalProject.GUI
             };
 
             var writer = new StaffWriter();
-            writer.Add(stuffMember);
+            writer.Add(staffMember);
             MessageBox.Show("Saved");
         }
     }
